@@ -1,0 +1,145 @@
+{
+  "anchor_summary": {
+    "topic": "Deterministic, formally verifiable governance layer for LLM agents that intercepts tool-use intents and enforces policies via a reference monitor",
+    "subareas": [
+      "LLM agent safety and governance (\"System 2\" oversight for tool use)",
+      "Reference monitors and security kernels for AI agents",
+      "Policy engines for tool invocation (ACLs, resource limits, taint/information-flow checks)",
+      "Runtime mediation / scheduler interception for probabilistic components",
+      "Formal verification of safety-critical enforcement code",
+      "Secure orchestration and workflow control for autonomous agents"
+    ],
+    "key_terms": [
+      "symbolic governor",
+      "system 2 oversight",
+      "root of trust",
+      "deterministic enforcement",
+      "formally verifiable runtime",
+      "trusted computing base (TCB)",
+      "security kernel",
+      "reference monitor",
+      "complete mediation",
+      "tool use governance",
+      "tool invocation mediation",
+      "intent-based tool calls",
+      "scheduler interception",
+      "runtime monitor",
+      "policy engine",
+      "policy enforcement point (PEP)",
+      "policy decision point (PDP)",
+      "access control list (ACL)",
+      "capability-based security",
+      "resource limits / quotas",
+      "sandboxing",
+      "taint tracking",
+      "information-flow control (IFC)",
+      "confinement",
+      "safe action execution",
+      "probabilistic CPU",
+      "agent constitution",
+      "workflow orchestration",
+      "LLM agent runtime security"
+    ],
+    "likely_venues": [
+      "IEEE Symposium on Security and Privacy",
+      "USENIX Security Symposium",
+      "ACM Conference on Computer and Communications Security (CCS)",
+      "Network and Distributed System Security Symposium (NDSS)",
+      "USENIX OSDI",
+      "USENIX NSDI",
+      "ACM SOSP",
+      "ACM Eurosys",
+      "PLDI",
+      "POPL",
+      "CAV",
+      "FM",
+      "CSF (IEEE Computer Security Foundations Symposium)",
+      "AAMAS (Autonomous Agents and Multiagent Systems)",
+      "NeurIPS (safety/workshop tracks)",
+      "ICLR (alignment/safety/workshop tracks)",
+      "AAAI (agent safety tracks)"
+    ],
+    "exclusions": [
+      "Purely prompt-based safety / guardrails without runtime mediation",
+      "LLM fine-tuning or RLHF methods not tied to deterministic policy enforcement",
+      "Pure content moderation/classification pipelines unrelated to tool execution",
+      "Traditional OS scheduling not involving interception/mediation of agent tool calls",
+      "Non-verifiable, heuristic-only agent frameworks without a trusted reference monitor",
+      "General \"AI ethics\" discussions without concrete enforcement mechanisms (ACLs, taint checks, resource limits)"
+    ]
+  },
+  "existing_citations_count": 0,
+  "seed_expansion_used": false,
+  "bib_path": "cases\\references.bib",
+  "existing_entries_count": 0,
+  "new_entries_added_count": 0,
+  "new_bibkeys_added": [],
+  "warnings": [],
+  "claims": [
+    {
+      "sid": "S0",
+      "sentence": "The Symbolic Governor acts as the \"System 2\" component of the agent.",
+      "rationale": "Equates the Symbolic Governor to a specific cognitive-oversight role (\"System 2\"), which is a conceptual framing that should be supported by a citation or clearly established definition in prior work.",
+      "claim_type": "definition",
+      "queries": [
+        "\"reference monitor\" LLM agent tool use governance policy enforcement point",
+        "\"security kernel\" \"trusted computing base\" deterministic enforcement \"tool invocation\" agent",
+        "\"runtime monitor\" mediation scheduler interception probabilistic component policy engine",
+        "\"complete mediation\" capability-based security ACL \"tool invocation\" autonomous agent",
+        "\"information-flow control\" taint tracking sandboxing \"tool use\" policy enforcement LLM agent"
+      ],
+      "selected": [],
+      "status": "NEED_MANUAL",
+      "notes": "No reliable BibTeX (missing DOI)."
+    },
+    {
+      "sid": "S3",
+      "sentence": "g., Python, Rust) and is formally verifiable.",
+      "rationale": "Asserts an implementation detail (written in specific languages) and a strong property (formally verifiable); both require support unless presented purely as a proposal/plan.",
+      "claim_type": "method_description",
+      "queries": [
+        "\"reference monitor\" LLM agent tool use governance \"complete mediation\"",
+        "\"security kernel\" \"trusted computing base\" (LLM OR \"language model\") agent runtime monitor",
+        "\"policy enforcement point\" PEP PDP tool invocation mediation autonomous agent runtime",
+        "\"information-flow control\" taint tracking \"tool use\" agent \"runtime monitor\"",
+        "\"formal verification\" (reference monitor OR security kernel OR policy engine) enforcement code",
+        "\"capability-based security\" ACL quotas sandboxing \"tool invocation\" agent"
+      ],
+      "selected": [],
+      "status": "NEED_MANUAL",
+      "notes": "No reliable BibTeX (missing DOI)."
+    },
+    {
+      "sid": "S7",
+      "sentence": "In ArbiterOS, the LLM emits an intent to call a tool.",
+      "rationale": "States a specific behavior/architecture of a named system (ArbiterOS); this is a factual claim about prior work that should be supported by a source.",
+      "claim_type": "prior_work",
+      "queries": [
+        "\"ArbiterOS\" LLM intent tool call",
+        "\"intent\" \"tool\" invocation mediation \"reference monitor\" LLM agent",
+        "\"tool use\" governance \"policy enforcement point\" PEP \"policy decision point\" PDP LLM agent",
+        "\"security kernel\" \"complete mediation\" runtime monitor agent tool invocation",
+        "\"deterministic enforcement\" \"formally verified\" reference monitor policy engine capability-based"
+      ],
+      "selected": [],
+      "status": "NEED_MANUAL",
+      "notes": "No reliable BibTeX (missing DOI)."
+    },
+    {
+      "sid": "S11",
+      "sentence": "This \"Reference Monitor\" pattern  ensures that the agent's cognitive instability cannot propagate to the external world.",
+      "rationale": "Asserts a concrete safety property/effect of the reference monitor pattern (preventing agent instability from affecting the external world), which is a nontrivial factual/security claim that should be supported by prior literature on reference monitors/complete mediation.",
+      "claim_type": "background_fact",
+      "queries": [
+        "\"reference monitor\" LLM agent tool invocation mediation policy enforcement point",
+        "\"security kernel\" trusted computing base deterministic enforcement runtime monitor formal verification",
+        "\"complete mediation\" policy engine tool use governance capability-based security resource limits quotas",
+        "\"information-flow control\" taint tracking confinement runtime monitor autonomous agent tool use",
+        "\"policy decision point\" \"policy enforcement point\" workflow orchestration secure runtime mediation LLM agents"
+      ],
+      "selected": [],
+      "status": "NEED_MANUAL",
+      "notes": "No reliable BibTeX (missing DOI)."
+    }
+  ]
+}

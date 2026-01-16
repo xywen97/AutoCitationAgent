@@ -1,0 +1,9 @@
+langgraph
+langchain-core
+openai
+httpx
+pydantic
+python-dotenv
+rapidfuzz
+tenacity
+pytest

@@ -1,0 +1,24 @@
+[project]
+name = "auto_citation_agent"
+version = "0.1.0"
+description = "LangGraph-based citation assistant for LaTeX drafts."
+requires-python = ">=3.11"
+dependencies = [
+  "langgraph",
+  "langchain-core",
+  "openai",
+  "httpx",
+  "pydantic",
+  "python-dotenv",
+  "rapidfuzz",
+  "tenacity",
+  "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
