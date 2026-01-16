@@ -8,9 +8,9 @@
 ## BibTeX update summary
 
 - bib_path: cases\references.bib
-- existing_entries_count: 5
-- new_entries_added_count: 3
-- new_bibkeys_added: UnknownMoving, UnknownEstablishing, UnknownUniversity
+- existing_entries_count: 10
+- new_entries_added_count: 1
+- new_bibkeys_added: UnknownTrustworthy
 
 ## Claims
 
@@ -18,42 +18,41 @@
 
 - sentence: The Symbolic Governor acts as the "System 2" component of the agent.
 - claim_type: definition
-- rationale: The statement defines the role of the Symbolic Governor, which is a specific concept that requires citation for clarity and validation.
+- rationale: The role of the Symbolic Governor as the 'System 2' component is a specific conceptual claim that requires citation.
 - status: NEED_MANUAL
-- notes: No candidates met thresholds. Provide manual review.
-- queries: Symbolic Governor in agent systems, formal verification of deterministic programming in agent-based systems, trust in AI and the role of Symbolic Governor, System 2 and its impact on agent decision-making, deterministic code in AI systems with Symbolic Governor
+- notes: No reliable BibTeX (missing DOI).
+- queries: Symbolic Governor in agent systems, System 2 component in AI agents, formal verification of deterministic programming in AI, trust in AI systems with Symbolic Governor, LLM and deterministic code in agent systems
 - selected papers:
-  - Moving Beyond System 1 and System 2 (None) DOI=10.1027/1618-3169/a000450 score=0.45499999999999996
 
 ### S1
 
 - sentence: It is the root of trust.
 - claim_type: definition
-- rationale: The phrase 'root of trust' is a specific term that requires citation to clarify its meaning and context.
+- rationale: The phrase 'It is the root of trust' makes a claim about trust without providing a source or context, necessitating citation.
 - status: NEED_MANUAL
 - notes: No candidates met thresholds. Provide manual review.
-- queries: Symbolic Governor in agent systems for formal verification, deterministic programming and trust in AI using Symbolic Governor, root of trust in agent-based systems with deterministic code, formal verification techniques for Symbolic Governor in AI, LLM and Symbolic Governor in the context of trust in AI
+- queries: Symbolic Governor in agent systems for formal verification, Trust in AI systems through deterministic programming, Formal verification methods for Symbolic Governor applications, Impact of deterministic code on trust in AI systems, System 2 approaches in AI with Symbolic Governor
 - selected papers:
-  - Establishing Software Root of Trust Unconditionally (None) DOI=10.14722/ndss.2019.23170 score=0.485
+  - Specification and Verification of Multi-Agent Systems (None) DOI=10.1007/978-3-642-31485-8_6 score=0.33499999999999996
 
 ### S2
 
 - sentence: Unlike the LLM, the Governor is implemented in deterministic code (e.
-- claim_type: method_description
-- rationale: The statement makes a factual claim about the implementation of the Governor in deterministic code, which requires citation.
+- claim_type: comparison
+- rationale: The statement compares the implementation of the Governor and LLM, which requires citation to support the claim about deterministic code.
 - status: NEED_MANUAL
 - notes: No reliable BibTeX (missing DOI).
-- queries: Symbolic Governor in agent systems, formal verification of deterministic programming in AI, trust in AI with Symbolic Governor, deterministic code in agent-based systems, root of trust in Symbolic Governor implementations
+- queries: Symbolic Governor in agent systems, formal verification of deterministic programming, trust in AI systems with Symbolic Governor, LLM vs Symbolic Governor in deterministic code, formal methods for Symbolic Governor implementation
 - selected papers:
 
 ### S3
 
 - sentence: g., Python, Rust) and is formally verifiable.
 - claim_type: prior_work
-- rationale: The statement refers to programming languages and formal verifiability, which are factual claims that require citation.
+- rationale: The statement refers to formal verifiability, which is a factual claim that typically requires citation.
 - status: NEED_MANUAL
 - notes: No candidates met thresholds. Provide manual review.
-- queries: Symbolic Governor in agent systems formal verification, deterministic programming Symbolic Governor root of trust, trust in AI Symbolic Governor agent-based systems, formal verification of deterministic code in AI systems, LLM and Symbolic Governor in agent systems
+- queries: Symbolic Governor in agent systems formal verification, deterministic programming with Symbolic Governor, trust in AI systems using formal verification, System 2 and deterministic code in AI, LLM and Symbolic Governor for formal methods
 - selected papers:
-  - University of Birmingham (None) DOI=10.1038/165303c0 score=0.42000000000000004
+  - Trustworthy AI (None) DOI=10.71265/pztsvw73 score=0.31999999999999995
 

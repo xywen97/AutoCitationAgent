@@ -21,6 +21,12 @@ def setup_logging(level: int = logging.INFO, format_string: Optional[str] = None
         handlers=[logging.StreamHandler(sys.stdout)],
         force=True,  # Override any existing configuration
     )
+    
+    # Disable verbose HTTP logging from httpx, httpcore, and OpenAI
+    logging.getLogger("httpx").setLevel(logging.WARNING)
+    logging.getLogger("httpcore").setLevel(logging.WARNING)
+    logging.getLogger("openai").setLevel(logging.WARNING)
+    logging.getLogger("urllib3").setLevel(logging.WARNING)
 
 
 def get_logger(name: str) -> logging.Logger:

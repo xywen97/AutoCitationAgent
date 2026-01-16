@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from tqdm import tqdm
+
 from ..state import GraphState
 from ...tools.dedupe import dedupe_candidates
 from ...tools.logger import get_logger
@@ -27,17 +29,18 @@ def search_node(state: GraphState) -> GraphState:
         cache_dir=state.config.cache_dir,
     )
     candidates_by_claim = {}
-    for claim in state.claims:
+    for claim in tqdm(state.claims, desc="[search] Querying backends", unit="claim"):
         queries = state.queries_by_claim.get(claim.cid, [])
+        logger.info("[search] Querying %d queries for claim %s", len(queries), claim.cid)
         items = []
-        for q in queries:
+        for q in tqdm(queries, desc=f"[search] Claim {claim.cid}", leave=False, unit="query"):
             if perplexity:
                 try:
                     results = perplexity.search_papers(q.query, state.config.top_k_per_query)
                     items.extend(results)
-                    logger.debug("[search] Perplexity query '%s' returned %d results", q.query, len(results))
+                    logger.debug("[search] Perplexity query '<%s>' returned %d results", q.query, len(results))
                 except Exception as exc:
-                    logger.warning("[search] Perplexity search failed for query '%s': %s", q.query, exc)
+                    logger.warning("[search] Perplexity search failed for query '<%s>': %s", q.query, exc)
             if state.config.semantic_scholar_api_key:
                 try:
                     results = client.search_papers(q.query, state.config.top_k_per_query)

@@ -3,6 +3,8 @@ from __future__ import annotations
 import math
 from typing import List
 
+from tqdm import tqdm
+
 from ..prompts import SCORER_SYSTEM, SCORER_USER
 from ..state import GraphState, PaperCandidate, SelectedForClaim
 from ...tools.llm import LlmClient
@@ -70,11 +72,13 @@ def rank_filter_node(state: GraphState) -> GraphState:
         model=state.config.openai_model,
     )
     selected = {}
-    for claim in state.claims:
+    for claim in tqdm(state.claims, desc="[rank_filter] Scoring candidates", unit="claim"):
         candidates = state.candidates_by_claim.get(claim.cid, [])
         logger.info("[rank_filter] Scoring %d candidates for claim %s", len(candidates), claim.cid)
         scored = []
-        for i in range(0, len(candidates), 8):
+        batch_size = 8
+        num_batches = (len(candidates) + batch_size - 1) // batch_size
+        for i in tqdm(range(0, len(candidates), batch_size), desc=f"[rank_filter] Claim {claim.cid}", leave=False, total=num_batches, unit="batch"):
             batch = candidates[i : i + 8]
             scores = _score_batch(llm, claim.text, batch)
             score_map = {s.get("paper_id"): s for s in scores}

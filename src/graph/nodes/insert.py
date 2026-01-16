@@ -28,27 +28,34 @@ def insert_node(state: GraphState) -> GraphState:
         if not sentence:
             continue
         need = needs_map.get(sid)
-        if selected.status == "OK" and selected.papers:
-            keys = []
+        
+        # Try to extract valid BibTeX keys from selected papers (regardless of status)
+        keys = []
+        if selected.papers:
             for p in selected.papers:
                 if p.doi and p.doi.lower() in state.existing_doi_index:
                     keys.append(state.existing_doi_index[p.doi.lower()])
                 elif p.doi and p.doi.lower() in state.bib_entries_by_doi:
                     keys.append(state.bib_entries_by_doi[p.doi.lower()].bibkey)
                 else:
+                    # Fallback: match by DOI in new_bib_entries
                     for k, entry in state.new_bib_entries.items():
                         if entry.doi and p.doi and entry.doi.lower() == p.doi.lower():
                             keys.append(k)
-            keys = [k for k in keys if k in valid_keys]
-            if not keys:
-                continue
+        keys = [k for k in keys if k in valid_keys]
+        
+        # If we have valid BibTeX keys, insert citations (even if status is NEED_MANUAL)
+        if keys:
             if "\\cite" in sentence.text:
                 new_sentence = append_cite(sentence.text, keys)
-                logger.debug("[insert] Appended citations %s to existing cite in sentence %s", keys, sid)
+                logger.info("[insert] Appended citations %s to existing cite in sentence %s (status: %s)", 
+                          keys, sid, selected.status)
             else:
                 new_sentence = insert_cite_at_sentence_end(sentence.text, keys)
-                logger.debug("[insert] Inserted new citations %s at end of sentence %s", keys, sid)
+                logger.info("[insert] Inserted citations %s at end of sentence %s (status: %s)", 
+                          keys, sid, selected.status)
             replacements[(sentence.start, sentence.end)] = new_sentence
+        # If no valid keys but status is NEED_MANUAL, add TODO comment
         elif selected.status == "NEED_MANUAL" and state.config.insert_todo_comment:
             claim_type = need.claim_type if need else "unknown"
             rationale = need.rationale if need else "insufficient evidence"
@@ -58,7 +65,7 @@ def insert_node(state: GraphState) -> GraphState:
                 new_sentence += " "
             new_sentence += todo
             replacements[(sentence.start, sentence.end)] = new_sentence
-            logger.debug("[insert] Added TODO comment for sentence %s", sid)
+            logger.warning("[insert] No valid BibTeX for sentence %s, added TODO comment", sid)
 
     if not replacements:
         logger.info("[insert] No citations to insert")

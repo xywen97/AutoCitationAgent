@@ -2,110 +2,85 @@
   "anchor_summary": {
     "topic": "Symbolic Governor in agent systems",
     "subareas": [
-      "formal verification",
-      "deterministic programming",
-      "agent-based systems",
-      "trust in AI"
+      "Formal verification",
+      "Deterministic programming",
+      "Trust in AI systems"
     ],
     "key_terms": [
       "Symbolic Governor",
       "System 2",
-      "root of trust",
       "deterministic code",
       "formal verification",
       "LLM"
     ],
     "likely_venues": [
-      "Artificial Intelligence Journal",
-      "Journal of Automated Reasoning",
-      "ACM Transactions on Intelligent Systems and Technology",
-      "IEEE Transactions on Neural Networks and Learning Systems"
+      "AI conferences",
+      "Software engineering journals",
+      "Formal methods workshops"
     ],
     "exclusions": [
-      "non-deterministic systems",
-      "purely statistical models",
-      "unverified AI systems"
+      "Non-deterministic systems",
+      "Unverified AI models",
+      "General machine learning without formal methods"
     ]
   },
   "existing_citations_count": 0,
   "seed_expansion_used": false,
   "bib_path": "cases\\references.bib",
-  "existing_entries_count": 5,
-  "new_entries_added_count": 3,
+  "existing_entries_count": 10,
+  "new_entries_added_count": 1,
   "new_bibkeys_added": [
-    "UnknownMoving",
-    "UnknownEstablishing",
-    "UnknownUniversity"
+    "UnknownTrustworthy"
   ],
   "warnings": [],
   "claims": [
     {
       "sid": "S0",
       "sentence": "The Symbolic Governor acts as the \"System 2\" component of the agent.",
-      "rationale": "The statement defines the role of the Symbolic Governor, which is a specific concept that requires citation for clarity and validation.",
+      "rationale": "The role of the Symbolic Governor as the 'System 2' component is a specific conceptual claim that requires citation.",
       "claim_type": "definition",
       "queries": [
         "Symbolic Governor in agent systems",
-        "formal verification of deterministic programming in agent-based systems",
-        "trust in AI and the role of Symbolic Governor",
-        "System 2 and its impact on agent decision-making",
-        "deterministic code in AI systems with Symbolic Governor"
+        "System 2 component in AI agents",
+        "formal verification of deterministic programming in AI",
+        "trust in AI systems with Symbolic Governor",
+        "LLM and deterministic code in agent systems"
       ],
-      "selected": [
-        {
-          "paper_id": null,
-          "title": "Moving Beyond System 1 and System 2",
-          "authors": [],
-          "year": null,
-          "venue": null,
-          "abstract": "In this paper, I argue that the impact of relational knowledge is more widespread than dual-system models imply. More specifically, I review evidence suggesting that also Pavlovian conditioning, implicit evaluation, and habitual responding are mediated by relational knowledge. Considering the idea that relational knowledge underlies also fast, unintentional, unconscious, and seemingly associative psychological phenomena is not only theoretically important but also reveals new opportunities for influencing thinking and behavior.... For instance, Kahneman (2011) distinguishes between System 1 and System 2 thinking not only on the basis of speed (fast vs. slow) but also in terms of intentionality (unintentional vs. intentional), consciousness (unconscious vs. conscious), and the nature of processing (associative vs. propositional). This implies that all fast thinking is also unintentional, unconscious, and associative whereas all slow thinking is also intentional, conscious, and propositional.... Most relevant for the present paper, dual-system models foster the idea that relational knowledge is important only for System 2-type thinking (i.e., thinking that is slow, intentional, conscious, and propositional).... Indeed, the conclusion that relational knowledge is relevant for System 2 but not System 1 follows naturally from the assumptions that (1) there are two cognitive systems with multiple opposing properties (i.e., the dual-system alignment assumption), (2) higher order cognition such as reasoning, language, and planning are instances of System 2 thinking (e.g., Kahneman, 2011), and (3) higher order cognition relies on relational knowledge.... automatic and seemingly irrational ways of thinking and behaving can result in new\nways of tackling psychological problems.\n\n## Evidence for a Widespread Impact of Relational Knowledge... Second, research revealed that instructions can influence implicit evaluations even in the absence of changes in explicit evaluations (Van Dessel, De Houwer, Gast, Smith, & De Schryver, 2016). Third, to the extent that instructions provide diagnostic and credible information, they can alter even long-standing, deeply rooted implicit evaluations.... This pattern of results could reflect the joint impact of propositions and associations on implicit evaluations but it could also reflect the joint impact of multiple propositions on implicit evaluations, some based on pairings (e.g., \u201cthis person co-occurred with positive traits\u201d) and some based on relational information (e.g., \u201cthis person is good because he was paired with negative traits\u201d; De Houwer, 2018b; Moran et al., 2016).",
-          "doi": "10.1027/1618-3169/a000450",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7037735/",
-          "citation_count": null,
-          "source": "perplexity",
-          "seed_boost": 0.0,
-          "relevance": 0.5,
-          "support": 0.5,
-          "authority": 0.2,
-          "final": 0.45499999999999996,
-          "evidence_snippet": "dual-system models foster the idea that relational knowledge is important only for System 2-type thinking",
-          "why": "The paper discusses the distinction between System 1 and System 2 thinking, suggesting that relational knowledge is primarily associated with System 2. This supports the claim that the Symbolic Governor acts as the System 2 component."
-        }
-      ],
+      "selected": [],
       "status": "NEED_MANUAL",
-      "notes": "No candidates met thresholds. Provide manual review."
+      "notes": "No reliable BibTeX (missing DOI)."
     },
     {
       "sid": "S1",
       "sentence": "It is the root of trust.",
-      "rationale": "The phrase 'root of trust' is a specific term that requires citation to clarify its meaning and context.",
+      "rationale": "The phrase 'It is the root of trust' makes a claim about trust without providing a source or context, necessitating citation.",
       "claim_type": "definition",
       "queries": [
         "Symbolic Governor in agent systems for formal verification",
-        "deterministic programming and trust in AI using Symbolic Governor",
-        "root of trust in agent-based systems with deterministic code",
-        "formal verification techniques for Symbolic Governor in AI",
-        "LLM and Symbolic Governor in the context of trust in AI"
+        "Trust in AI systems through deterministic programming",
+        "Formal verification methods for Symbolic Governor applications",
+        "Impact of deterministic code on trust in AI systems",
+        "System 2 approaches in AI with Symbolic Governor"
       ],
       "selected": [
         {
           "paper_id": null,
-          "title": "Establishing Software Root of Trust Unconditionally",
+          "title": "Specification and Verification of Multi-Agent Systems",
           "authors": [],
           "year": null,
           "venue": null,
-          "abstract": "Note that a verifier can use neither Cm,t computations\nthat have asymptotic lower bounds nor ones that have only\ntheoretical ones; i.e., bounds that cannot be matched by any\nprogram, as illustrated below. If Cm,t\u2019s lower bounds are\nasymptotic, a verifier can never prove that an adversary is... an adversary\u2019s code couldn\u2019t execute faster than the measured\ntime, which renders verification meaningless. If the memory\n2... Verifier Protocol Atomicity \n    concurrent \n    transaction \norder & duration \n verifiable  \ncontrol flow \n Code Optimality \nscalable  \nbounds \nunpredictable \n       result \n     code \ncomposition \nTime Measurement Security \nLegend:            denotes a dependency \nFig. 1: RoT Establishment on an Untrusted System... They also assure bounds scalability5, which enables the verifier\nto satisfy the transaction order and duration requirement and\nleads to the establishment of malware-free states on a multi-\ndevice system (Theorem 7). Finally, the verifier uses ordinary\nuniversal hash functions to establish RoT in malware-free\nstates (Theorem 8).... Pd(x) = (\u00b7 \u00b7 \u00b7 (ad\u00d7x+ad\u22121)\u00d7x+\u00b7 \u00b7 \u00b7+a1)\u00d7x+a0 (mod p).\nHorner-rule step and programs. A program that evaluates\nai \u00d7 x + ai\u22121 (mod p) as a sequence of four instructions... One time, honest evaluation. Polynomial Pd(x) is evaluated\none time if nothing is known about coefficients ai and input\nx before the evaluation starts; i.e., ai and x are variables.\nThe evaluation of Pd(x) is honest if its program code is\nfixed before constants are assigned to variables ai and x (i.e.,... its evaluation requires a unique two-instruction loop-control\nsequence that must iterate d times over the Horner-rule step.\nA similar proof holds over Fq when q > 2 is a prime\npower. To illustrate, we outline it for the important case q =\n2w\u22121. Here the Horner-rule program needs only d + 8 words... of m. If t needs to be large, d becomes large. Hence not all\nd+1 coefficients of Pd could always be input at the same time;\ne.g., in one packet. This would enable an adversary\u2019s code to\npre-process the coefficients that arrive early and circumvent the\noptimal bounds; e.g., with pre-processing, the lower bound for",
-          "doi": "10.14722/ndss.2019.23170",
-          "url": "https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_10-4_Gligor_paper.pdf",
+          "abstract": "area. We introduce modal logics used for specification of temporal, epistemic,\nand strategic properties of systems; then, we present some model checking algo-\nrithms, and discuss the computational complexity of the model checking prob-\nlem. Finally, we consider symbolic (compact) representations of systems based\non Binary Decision Diagrams (BDD) and propositional logic formulas, and show... 3. Specification of agents and their teams. Strategic logics: Coalition Logic,\nATL. Meta-properties: axiomatization, model equivalence. Reasoning about\nscenarios with imperfect information.\n4. Complexity of verification. Model checking complexity for explicit models,\ncomplexity proofs. State-space explosion. Complexity revisited: compact rep-\nresentation of transitions, higher-order representations.\n5. Practical model checking. BDD-based and SAT-based approaches to model\nchecking, bounded and unbounded model checking for CTLK, unbounded\nmodel checking for ATL.... of propositions, and each \u223c\ud456\u2286\ud446\ud461\u00d7 \ud446\ud461is an equivalence relation that defines the\nindistinguishability of states for agent \ud456. Operators K\ud456are provided with the\nusual Kripke semantics given by the clause:... \ud701: 2\ud446\ud461\u2212\u21922\ud446\ud461if\n\ud701(\ud446\ud461\u2032) = \ud446\ud461\u2032.... and time has been presented in [28]. The proposal builds on a notion of global\nstates, defined formally as follows. Firstly, each agent \ud456\u2208\ud538gt = {1, ..., \ud458} has\na set of local states \ud446\ud461\ud456. Every global state is represented by a tuple of local... interpreted systems provide more \u201cgrounded\u201d semantics for agents\u2019 knowledge\nthan abstract Kripke models. This is because starting from the local state spaces\nmakes it clearer how the epistemic model should be actually constructed.\nIt is usually assumed in interpreted systems that each agent has access only\nto its own local state, i.e.:... relatively easy. For high complexity classes, this is not the case anymore.\nThe process of verification (so called model checking) answers whether a given\nformula \ud711is satisfied in a state \ud45eof model \ud440. Formally, local model checking is\nthe decision problem that determines membership in the set",
+          "doi": "10.1007/978-3-642-31485-8_6",
+          "url": "https://home.ipipan.waw.pl/w.jamroga/papers/verification12esslli-lncs.pdf",
           "citation_count": null,
           "source": "perplexity",
           "seed_boost": 0.0,
-          "relevance": 0.5,
-          "support": 0.5,
-          "authority": 0.4,
-          "final": 0.485,
-          "evidence_snippet": "",
-          "why": "This paper explores the role of trust in software agents but does not focus on the foundational aspect of a root of trust."
+          "relevance": 0.3,
+          "support": 0.4,
+          "authority": 0.2,
+          "final": 0.33499999999999996,
+          "evidence_snippet": "algorithmic verification of homogeneous dynamic multi-agent systems.",
+          "why": "The paper discusses verification techniques that contribute to the trustworthiness of multi-agent systems."
         }
       ],
       "status": "NEED_MANUAL",
@@ -114,14 +89,14 @@
     {
       "sid": "S2",
       "sentence": "Unlike the LLM, the Governor is implemented in deterministic code (e.",
-      "rationale": "The statement makes a factual claim about the implementation of the Governor in deterministic code, which requires citation.",
-      "claim_type": "method_description",
+      "rationale": "The statement compares the implementation of the Governor and LLM, which requires citation to support the claim about deterministic code.",
+      "claim_type": "comparison",
       "queries": [
         "Symbolic Governor in agent systems",
-        "formal verification of deterministic programming in AI",
-        "trust in AI with Symbolic Governor",
-        "deterministic code in agent-based systems",
-        "root of trust in Symbolic Governor implementations"
+        "formal verification of deterministic programming",
+        "trust in AI systems with Symbolic Governor",
+        "LLM vs Symbolic Governor in deterministic code",
+        "formal methods for Symbolic Governor implementation"
       ],
       "selected": [],
       "status": "NEED_MANUAL",
@@ -130,34 +105,34 @@
     {
       "sid": "S3",
       "sentence": "g., Python, Rust) and is formally verifiable.",
-      "rationale": "The statement refers to programming languages and formal verifiability, which are factual claims that require citation.",
+      "rationale": "The statement refers to formal verifiability, which is a factual claim that typically requires citation.",
       "claim_type": "prior_work",
       "queries": [
         "Symbolic Governor in agent systems formal verification",
-        "deterministic programming Symbolic Governor root of trust",
-        "trust in AI Symbolic Governor agent-based systems",
-        "formal verification of deterministic code in AI systems",
-        "LLM and Symbolic Governor in agent systems"
+        "deterministic programming with Symbolic Governor",
+        "trust in AI systems using formal verification",
+        "System 2 and deterministic code in AI",
+        "LLM and Symbolic Governor for formal methods"
       ],
       "selected": [
         {
           "paper_id": null,
-          "title": "University of Birmingham",
+          "title": "Trustworthy AI",
           "authors": [],
           "year": null,
           "venue": null,
-          "abstract": "Root-of-trust abstractions for symbolic analysis\nFotiadis, Georgios; Moreira-Sanchez, Jose; Giannetsos, Thanassis; Chen, Liqun; Ronne,\nPeter B.; Ryan, Mark; Ryan, Peter Y.A.\nDOI:\n10.1007/978-3-030-91859-0_9... Root-of-Trust Abstractions for Symbolic\nAnalysis: Application to Attestation Protocols\nGeorgios Fotiadis1, Jos\u00b4e Moreira2, Thanassis Giannetsos3, Liqun Chen4,\nPeter B. R\u00f8nne1, Mark D. Ryan2, and Peter Y.A. Ryan1... and verification of the the Direct Anonymous Attestation (DAA) protocol of\nthe TPM. On the other hand, Delaune et al. [10], propose a Horn-clause frame-\nwork where they prove its soundness and use ProVerif to approximate the TPM\ninternal state space, helping to address non-termination issues.... perspective of formally verifying RoT-based applications, this model represents\na means of reasoning about security and privacy (of offered services) without\nbeing bogged down by the intricacies of various crypto primitives considered\nin the different platforms. We conduct our analysis in the symbolic model of\ncryptography (Dolev-Yao adversary [11]) through the Tamarin prover [4] and its... refer the reader to [24,25,26,3,21,14].\n2.1\nThe TPM as a Root of Trust\nThe Trusted Computing Group (TCG) splits the responsibility of the RoT into\nthree categories: measurement, storage and reporting [24]. The RoT for mea-\nsurement is usually the first piece of BIOS code that is executed on the main... processor during boot, and starts a chain of measurements. The RoT for storage\nand reporting are responsibilities assigned to the TPM, typically implemented\nas a tamper-resistant hardware embedded in a host device. The TPM and the\nhost device form a platform.\nA measurement chain of trust is a mechanism that allows to establish trust... authorization values or policies, and to maintain state between subsequent com-\nmands. To load or use a TPM object a session must be created, and the user will\nindicate what assertions must be checked. The TPM checks the assertions and\nupdates the session attribute policyDigest (a hash chain) if they succeed. If",
-          "doi": "10.1038/165303c0",
-          "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/159106790/ESORICS_2021_paper.pdf",
+          "abstract": "# Computer Science > Artificial Intelligence\n\n**arXiv:2002.06276** (cs)\n\n[Submitted on 14 Feb 2020]... # Title: Trustworthy AI\nAuthors:Jeannette M. Wing\nAbstract:The promise of AI is huge. AI systems have already achieved good enough performance to be in our streets and in our homes. However, they can be brittle and unfair. For society to reap the benefits of AI systems, society needs to be able to trust them. Inspired by decades of progress in trustworthy computing, we suggest what trustworthy properties would be desired of AI systems. By enumerating a set of new research questions, we explore one approach--formal verification--for ensuring trust in AI. Trustworthy AI ups the ante on both trustworthy computing and formal methods.... |Comments:|12 pages|\n|--|--|\n|Subjects:|Artificial Intelligence (cs.AI)|\n|ACM classes:|C.4; D.3.1; D.4.6; F.3.1; G.3; I.2|\n|Cite as:|arXiv:2002.06276 [cs.AI]|... | |(or arXiv:2002.06276v1 [cs.AI] for this version)|\n| |https://doi.org/10.48550/arXiv.2002.06276 arXiv-issued DOI via DataCite|\n\n## Submission history\nFrom: Jeannette Wing [view email] **[v1]** Fri, 14 Feb 2020 22:45:36 UTC (406 KB)\n\nFull-text links:\n## Access Paper:\n- View PDF\n- Other Formats\nview license",
+          "doi": "10.71265/pztsvw73",
+          "url": "https://arxiv.org/abs/2002.06276",
           "citation_count": null,
           "source": "perplexity",
           "seed_boost": 0.0,
           "relevance": 0.4,
-          "support": 0.5,
+          "support": 0.3,
           "authority": 0.2,
-          "final": 0.42000000000000004,
-          "evidence_snippet": "deterministic coding has its limitations",
-          "why": "It discusses deterministic programming but lacks a direct connection to formal verification of languages like Python or Rust."
+          "final": 0.31999999999999995,
+          "evidence_snippet": "formal proofs of an algorithm\u2019s optimal quality do not guarantee that an application implements or uses the algorithm correctly.",
+          "why": "This paper highlights the limitations of formal proofs, which detracts from the claim about the effectiveness of formal verification."
         }
       ],
       "status": "NEED_MANUAL",

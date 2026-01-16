@@ -4,6 +4,7 @@ import re
 from typing import Optional
 
 from rapidfuzz import fuzz
+from tqdm import tqdm
 
 from ..state import BibliographyEntry, GraphState
 from ...tools.bibtex_io import dedupe_bibkey, make_bibkey
@@ -49,10 +50,10 @@ def _resolve_doi_by_title(
 def synthesize_node(state: GraphState) -> GraphState:
     logger.info("[synthesize] Resolving DOIs and fetching BibTeX entries")
     client = CrossrefClient(state.config.crossref_base_url, state.config.cache_dir)
-    for claim_id, selected in state.selected_by_claim.items():
+    for claim_id, selected in tqdm(state.selected_by_claim.items(), desc="[synthesize] Resolving DOIs", unit="claim"):
         logger.debug("[synthesize] Processing %d papers for claim %s", len(selected.papers), claim_id)
         valid_papers = []
-        for paper in selected.papers:
+        for paper in tqdm(selected.papers, desc=f"[synthesize] Claim {claim_id}", leave=False, unit="paper"):
             doi = paper.doi
             if not doi and paper.title:
                 doi = _resolve_doi_by_title(client, paper.title, paper.year)

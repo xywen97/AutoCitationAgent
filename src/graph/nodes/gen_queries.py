@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from tqdm import tqdm
+
 from ..prompts import QUERY_GEN_SYSTEM, QUERY_GEN_USER
 from ..state import ClaimItem, GraphState, QueryItem
 from ...tools.llm import LlmClient
@@ -20,7 +22,9 @@ def gen_queries_node(state: GraphState) -> GraphState:
     anchor_terms = state.anchor_summary.get("key_terms", []) if state.anchor_summary else []
 
     needs_map = {n.sid: n for n in state.citation_needs}
-    for sentence in state.sentences:
+    sentences_needing_cites = [s for s in state.sentences if needs_map.get(s.sid, None) and needs_map[s.sid].needs_more_citations]
+    
+    for sentence in tqdm(sentences_needing_cites, desc="[gen_queries] Generating queries", unit="claim"):
         need = needs_map.get(sentence.sid)
         if not need or not need.needs_more_citations:
             continue
