@@ -10,7 +10,7 @@ from ..state import BibliographyEntry, GraphState
 from ...tools.bibtex_io import dedupe_bibkey, make_bibkey
 from ...tools.crossref import CrossrefClient
 from ...tools.logger import get_logger
-from ...tools.text_utils import normalize_title
+from ...tools.text_utils import normalize_title, parse_bibtex_entries
 
 logger = get_logger(__name__)
 
@@ -71,10 +71,32 @@ def synthesize_node(state: GraphState) -> GraphState:
             if not bibtex:
                 logger.warning("[synthesize] No BibTeX returned for DOI %s", doi)
                 continue
-            author_last = _first_author_last(paper.authors)
-            year = str(paper.year or "")
-            title_word = _title_word(paper.title or "")
-            bibkey = make_bibkey(author_last, year, title_word)
+            
+            # Extract bibkey from BibTeX (preferred method)
+            parsed = parse_bibtex_entries(bibtex)
+            bibkey = None
+            if parsed:
+                # Use the first (and usually only) key from the BibTeX
+                bibkey = list(parsed.keys())[0]
+                # Also update paper metadata from BibTeX if missing
+                fields = list(parsed.values())[0]
+                if not paper.authors and fields.get("author"):
+                    # Parse authors from BibTeX format (e.g., "Last, First and Last2, First2")
+                    authors_str = fields.get("author", "")
+                    paper.authors = [a.strip() for a in authors_str.split(" and ")]
+                if not paper.year and fields.get("year"):
+                    try:
+                        paper.year = int(fields.get("year"))
+                    except (ValueError, TypeError):
+                        pass
+            
+            # Fallback: generate bibkey if not found in BibTeX
+            if not bibkey:
+                author_last = _first_author_last(paper.authors)
+                year = str(paper.year or "")
+                title_word = _title_word(paper.title or "")
+                bibkey = make_bibkey(author_last, year, title_word)
+            
             bibkey = dedupe_bibkey(bibkey, list(state.existing_bib_entries.keys()) + list(state.new_bib_entries.keys()))
             entry = BibliographyEntry(
                 bibkey=bibkey,

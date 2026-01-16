@@ -1,102 +1,109 @@
 {
   "anchor_summary": {
-    "topic": "Symbolic Governor in agent systems",
+    "topic": "Symbolic Governor in AI systems",
     "subareas": [
       "Formal verification",
       "Deterministic programming",
-      "Trust in AI systems"
+      "Trust in AI",
+      "Agent-based systems"
     ],
     "key_terms": [
       "Symbolic Governor",
       "System 2",
+      "root of trust",
       "deterministic code",
       "formal verification",
       "LLM"
     ],
     "likely_venues": [
       "AI conferences",
-      "Software engineering journals",
+      "Systems journals",
       "Formal methods workshops"
     ],
     "exclusions": [
       "Non-deterministic systems",
       "Unverified AI models",
-      "General machine learning without formal methods"
+      "LLM-focused research"
     ]
   },
   "existing_citations_count": 0,
   "seed_expansion_used": false,
   "bib_path": "cases\\references.bib",
-  "existing_entries_count": 10,
+  "existing_entries_count": 11,
   "new_entries_added_count": 1,
   "new_bibkeys_added": [
-    "UnknownTrustworthy"
+    "Tam_Larrieux_2023"
   ],
   "warnings": [],
   "claims": [
     {
       "sid": "S0",
       "sentence": "The Symbolic Governor acts as the \"System 2\" component of the agent.",
-      "rationale": "The role of the Symbolic Governor as the 'System 2' component is a specific conceptual claim that requires citation.",
+      "rationale": "The term 'Symbolic Governor' and its role as 'System 2' need citation to support the claim.",
       "claim_type": "definition",
       "queries": [
-        "Symbolic Governor in agent systems",
-        "System 2 component in AI agents",
-        "formal verification of deterministic programming in AI",
-        "trust in AI systems with Symbolic Governor",
-        "LLM and deterministic code in agent systems"
-      ],
-      "selected": [],
-      "status": "NEED_MANUAL",
-      "notes": "No reliable BibTeX (missing DOI)."
-    },
-    {
-      "sid": "S1",
-      "sentence": "It is the root of trust.",
-      "rationale": "The phrase 'It is the root of trust' makes a claim about trust without providing a source or context, necessitating citation.",
-      "claim_type": "definition",
-      "queries": [
-        "Symbolic Governor in agent systems for formal verification",
-        "Trust in AI systems through deterministic programming",
-        "Formal verification methods for Symbolic Governor applications",
-        "Impact of deterministic code on trust in AI systems",
-        "System 2 approaches in AI with Symbolic Governor"
+        "Symbolic Governor in AI systems",
+        "System 2 component in agent-based systems",
+        "formal verification of deterministic programming with Symbolic Governor",
+        "trust in AI through Symbolic Governor mechanisms",
+        "root of trust in AI systems using Symbolic Governor"
       ],
       "selected": [
         {
           "paper_id": null,
-          "title": "Specification and Verification of Multi-Agent Systems",
-          "authors": [],
-          "year": null,
+          "title": "Regulating for trust: Can law establish trust in artificial intelligence?",
+          "authors": [
+            "Tam\u00f2\u2010Larrieux, Aurelia",
+            "Guitton, Clement",
+            "Mayer, Simon",
+            "Lutz, Christoph"
+          ],
+          "year": 2023,
           "venue": null,
-          "abstract": "area. We introduce modal logics used for specification of temporal, epistemic,\nand strategic properties of systems; then, we present some model checking algo-\nrithms, and discuss the computational complexity of the model checking prob-\nlem. Finally, we consider symbolic (compact) representations of systems based\non Binary Decision Diagrams (BDD) and propositional logic formulas, and show... 3. Specification of agents and their teams. Strategic logics: Coalition Logic,\nATL. Meta-properties: axiomatization, model equivalence. Reasoning about\nscenarios with imperfect information.\n4. Complexity of verification. Model checking complexity for explicit models,\ncomplexity proofs. State-space explosion. Complexity revisited: compact rep-\nresentation of transitions, higher-order representations.\n5. Practical model checking. BDD-based and SAT-based approaches to model\nchecking, bounded and unbounded model checking for CTLK, unbounded\nmodel checking for ATL.... of propositions, and each \u223c\ud456\u2286\ud446\ud461\u00d7 \ud446\ud461is an equivalence relation that defines the\nindistinguishability of states for agent \ud456. Operators K\ud456are provided with the\nusual Kripke semantics given by the clause:... \ud701: 2\ud446\ud461\u2212\u21922\ud446\ud461if\n\ud701(\ud446\ud461\u2032) = \ud446\ud461\u2032.... and time has been presented in [28]. The proposal builds on a notion of global\nstates, defined formally as follows. Firstly, each agent \ud456\u2208\ud538gt = {1, ..., \ud458} has\na set of local states \ud446\ud461\ud456. Every global state is represented by a tuple of local... interpreted systems provide more \u201cgrounded\u201d semantics for agents\u2019 knowledge\nthan abstract Kripke models. This is because starting from the local state spaces\nmakes it clearer how the epistemic model should be actually constructed.\nIt is usually assumed in interpreted systems that each agent has access only\nto its own local state, i.e.:... relatively easy. For high complexity classes, this is not the case anymore.\nThe process of verification (so called model checking) answers whether a given\nformula \ud711is satisfied in a state \ud45eof model \ud440. Formally, local model checking is\nthe decision problem that determines membership in the set",
-          "doi": "10.1007/978-3-642-31485-8_6",
-          "url": "https://home.ipipan.waw.pl/w.jamroga/papers/verification12esslli-lncs.pdf",
+          "abstract": "actively pursuing initiatives\u2014as the US Executive Order on Safe, Secure, and Trustworthy AI, or the Bletchley Declaration on\nAI showcase\u2014based on the premise that the right regulatory strategy can shape trust in AI. To analyze the validity of this\npremise, we propose to consider the broader literature on trust in automation. On this basis, we constructed a framework to... regulations can modulate trust levels.1 She is not alone in doing so and many other EU documents share this\nrationale, implicitly or explicitly: For instance, in October 2021, the European Commission issued a call to adapt\nliability regulations to AI which stated that \u201c[t]he Commission\u2019s objective is to encourage the development and... minimizes distrust. We show that reducing every known complexity of an interaction is unrealistic, con-\ntradicting arguments that regulation can completely replace trust by eliminating uncertainty. Thus, the role of\nregulation becomes one of creating a framework that renders the uncertainty and vulnerability of interactions\nmanageable for society. Upon this basis, we provide a theoretical model for trust in Section 3, which captures... assumption. Instead, regulation can foster aspects that contribute to trust. Hill and O\u2019Hara (2006), for instance,\nargue that a (trusting) party has a maximum level of uncertainty and vulnerability that they are willing to accept.\nIf that threshold is crossed, the \u201cleap of faith\u201d (see Section 3) cannot occur. However, if the law can reduce uncer-... The literature review illustrates that regulation can reduce the uncertainty of interactions by setting external fac-\ntors to push the trusted agent to act according to the best interest of the trusting party (e.g., by enacting fiduciary\nduties or by punishing actions that harm a trusting party). These findings can be applied to the context of... AI. Primarily, and as discussed within the policymaking discourse (e.g., HLEG, 2019), the goal of policymakers is\nto create a framework of incentives that promote the development of trustworthy artificial agents, meaning agents\nwho are (extrinsically via regulation) motivated to uphold the trust placed in them (and act in the interest of the... artificial agent by reducing the uncertainty of the interaction to an acceptable degree. Especially within the\ncontext of human-machine interactions, optimizing the trust relationship is central, as both distrusting AI fully,\nand thereby underexploiting its potential, as well as overtrusting AI, leads to societally unwelcomed situations.",
+          "doi": "10.1111/rego.12568",
+          "url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/rego.12568",
           "citation_count": null,
           "source": "perplexity",
           "seed_boost": 0.0,
-          "relevance": 0.3,
-          "support": 0.4,
+          "relevance": 0.5,
+          "support": 0.5,
           "authority": 0.2,
-          "final": 0.33499999999999996,
-          "evidence_snippet": "algorithmic verification of homogeneous dynamic multi-agent systems.",
-          "why": "The paper discusses verification techniques that contribute to the trustworthiness of multi-agent systems."
+          "final": 0.45499999999999996,
+          "evidence_snippet": "the goal of policymakers is to create a framework of incentives that promote the development of trustworthy artificial agents",
+          "why": "The paper discusses the role of regulation in fostering trust in AI, which aligns with the concept of the Symbolic Governor as a component that manages trust and decision-making. However, it does not explicitly define the Symbolic Governor as 'System 2'."
         }
       ],
       "status": "NEED_MANUAL",
       "notes": "No candidates met thresholds. Provide manual review."
     },
     {
+      "sid": "S1",
+      "sentence": "It is the root of trust.",
+      "rationale": "The phrase 'root of trust' is a specific term that requires citation to establish its definition and context.",
+      "claim_type": "definition",
+      "queries": [
+        "Symbolic Governor in AI systems for formal verification",
+        "Deterministic programming and root of trust in AI",
+        "Trust in AI through Symbolic Governor mechanisms",
+        "Agent-based systems with deterministic code and formal verification",
+        "LLM integration with Symbolic Governor for trust in AI"
+      ],
+      "selected": [],
+      "status": "NEED_MANUAL",
+      "notes": "No reliable BibTeX (missing DOI)."
+    },
+    {
       "sid": "S2",
       "sentence": "Unlike the LLM, the Governor is implemented in deterministic code (e.",
-      "rationale": "The statement compares the implementation of the Governor and LLM, which requires citation to support the claim about deterministic code.",
-      "claim_type": "comparison",
+      "rationale": "The statement makes a factual claim about the implementation of the Governor in deterministic code, which requires citation.",
+      "claim_type": "method_description",
       "queries": [
-        "Symbolic Governor in agent systems",
-        "formal verification of deterministic programming",
-        "trust in AI systems with Symbolic Governor",
-        "LLM vs Symbolic Governor in deterministic code",
-        "formal methods for Symbolic Governor implementation"
+        "Symbolic Governor in AI systems formal verification",
+        "deterministic programming Symbolic Governor root of trust",
+        "trust in AI systems Symbolic Governor deterministic code",
+        "agent-based systems with Symbolic Governor formal methods",
+        "LLM versus Symbolic Governor in AI trust"
       ],
       "selected": [],
       "status": "NEED_MANUAL",
@@ -105,38 +112,18 @@
     {
       "sid": "S3",
       "sentence": "g., Python, Rust) and is formally verifiable.",
-      "rationale": "The statement refers to formal verifiability, which is a factual claim that typically requires citation.",
+      "rationale": "The statement refers to formal verification, which is a specific area of research that typically requires citation to support claims about its applicability to programming languages.",
       "claim_type": "prior_work",
       "queries": [
-        "Symbolic Governor in agent systems formal verification",
+        "Symbolic Governor in AI systems formal verification",
         "deterministic programming with Symbolic Governor",
-        "trust in AI systems using formal verification",
-        "System 2 and deterministic code in AI",
-        "LLM and Symbolic Governor for formal methods"
+        "trust in AI using root of trust and formal verification",
+        "agent-based systems and Symbolic Governor",
+        "LLM and deterministic code in AI systems"
       ],
-      "selected": [
-        {
-          "paper_id": null,
-          "title": "Trustworthy AI",
-          "authors": [],
-          "year": null,
-          "venue": null,
-          "abstract": "# Computer Science > Artificial Intelligence\n\n**arXiv:2002.06276** (cs)\n\n[Submitted on 14 Feb 2020]... # Title: Trustworthy AI\nAuthors:Jeannette M. Wing\nAbstract:The promise of AI is huge. AI systems have already achieved good enough performance to be in our streets and in our homes. However, they can be brittle and unfair. For society to reap the benefits of AI systems, society needs to be able to trust them. Inspired by decades of progress in trustworthy computing, we suggest what trustworthy properties would be desired of AI systems. By enumerating a set of new research questions, we explore one approach--formal verification--for ensuring trust in AI. Trustworthy AI ups the ante on both trustworthy computing and formal methods.... |Comments:|12 pages|\n|--|--|\n|Subjects:|Artificial Intelligence (cs.AI)|\n|ACM classes:|C.4; D.3.1; D.4.6; F.3.1; G.3; I.2|\n|Cite as:|arXiv:2002.06276 [cs.AI]|... | |(or arXiv:2002.06276v1 [cs.AI] for this version)|\n| |https://doi.org/10.48550/arXiv.2002.06276 arXiv-issued DOI via DataCite|\n\n## Submission history\nFrom: Jeannette Wing [view email] **[v1]** Fri, 14 Feb 2020 22:45:36 UTC (406 KB)\n\nFull-text links:\n## Access Paper:\n- View PDF\n- Other Formats\nview license",
-          "doi": "10.71265/pztsvw73",
-          "url": "https://arxiv.org/abs/2002.06276",
-          "citation_count": null,
-          "source": "perplexity",
-          "seed_boost": 0.0,
-          "relevance": 0.4,
-          "support": 0.3,
-          "authority": 0.2,
-          "final": 0.31999999999999995,
-          "evidence_snippet": "formal proofs of an algorithm\u2019s optimal quality do not guarantee that an application implements or uses the algorithm correctly.",
-          "why": "This paper highlights the limitations of formal proofs, which detracts from the claim about the effectiveness of formal verification."
-        }
-      ],
+      "selected": [],
       "status": "NEED_MANUAL",
-      "notes": "No candidates met thresholds. Provide manual review."
+      "notes": "No reliable BibTeX (missing DOI)."
     }
   ]
 }
