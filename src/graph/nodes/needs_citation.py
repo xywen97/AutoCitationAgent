@@ -4,6 +4,9 @@ from ..prompts import NEEDS_CITATION_SYSTEM, NEEDS_CITATION_USER
 from ..state import CitationNeed, GraphState
 from ...tools.latex_utils import extract_cite_commands, sentence_has_any_cite
 from ...tools.llm import LlmClient
+from ...tools.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 _STRONG_CLAIM_TYPES = {
@@ -20,7 +23,7 @@ def _count_cites(sentence_text: str) -> int:
 
 
 def needs_citation_node(state: GraphState) -> GraphState:
-    print("[needs_citation] classifying sentences")
+    logger.info("Classifying sentences for citation needs")
     llm = LlmClient(
         api_key=state.config.openai_api_key,
         base_url=state.config.openai_base_url,
@@ -52,5 +55,7 @@ def needs_citation_node(state: GraphState) -> GraphState:
                 scope=result.get("scope", "sentence"),
             )
         )
+    needs_count = sum(1 for n in needs if n.needs_more_citations)
+    logger.info("Found %d sentences needing citations (out of %d total)", needs_count, len(needs))
     state.citation_needs = needs
     return state

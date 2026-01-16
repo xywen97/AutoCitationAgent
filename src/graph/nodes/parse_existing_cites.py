@@ -5,8 +5,11 @@ from typing import List
 from ..state import GraphState, SeedPaper
 from ...tools.bibtex_io import read_bibtex
 from ...tools.latex_utils import extract_cite_commands, normalize_bibkeys
+from ...tools.logger import get_logger
 from ...tools.semantic_scholar import SemanticScholarClient
 from ...tools.text_utils import normalize_title
+
+logger = get_logger(__name__)
 
 
 def _build_seed_papers(state: GraphState) -> List[SeedPaper]:
@@ -41,7 +44,7 @@ def _build_seed_papers(state: GraphState) -> List[SeedPaper]:
 
 
 def parse_existing_cites_node(state: GraphState) -> GraphState:
-    print("[parse_existing_cites] extracting cites and bib entries")
+    logger.info("Extracting existing citations and BibTeX entries")
     state.existing_cites = extract_cite_commands(state.raw_text)
     keys = []
     for span in state.existing_cites:
@@ -49,8 +52,11 @@ def parse_existing_cites_node(state: GraphState) -> GraphState:
     state.existing_bibkeys = set(normalize_bibkeys(keys))
 
     state.existing_bib_entries = read_bibtex(state.bib_path)
+    logger.info("Found %d existing BibTeX entries", len(state.existing_bib_entries))
     for bibkey, entry in state.existing_bib_entries.items():
         if entry.doi:
             state.existing_doi_index[entry.doi.lower()] = bibkey
     state.seed_papers = _build_seed_papers(state)
+    if state.seed_papers:
+        logger.info("Resolved %d seed papers for expansion", len(state.seed_papers))
     return state

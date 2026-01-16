@@ -3,10 +3,13 @@ from __future__ import annotations
 from ..prompts import QUERY_GEN_SYSTEM, QUERY_GEN_USER
 from ..state import ClaimItem, GraphState, QueryItem
 from ...tools.llm import LlmClient
+from ...tools.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 def gen_queries_node(state: GraphState) -> GraphState:
-    print("[gen_queries] generating search queries")
+    logger.info("Generating search queries for claims")
     llm = LlmClient(
         api_key=state.config.openai_api_key,
         base_url=state.config.openai_base_url,
@@ -39,6 +42,8 @@ def gen_queries_node(state: GraphState) -> GraphState:
             for q in seed_based[:2]:
                 query_items.append(QueryItem(cid=claim.cid, query=q, type="seed"))
         queries_by_claim[claim.cid] = query_items
+    total_queries = sum(len(qs) for qs in queries_by_claim.values())
+    logger.info("Generated %d queries for %d claims", total_queries, len(claims))
     state.claims = claims
     state.queries_by_claim = queries_by_claim
     return state

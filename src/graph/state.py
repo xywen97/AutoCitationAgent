@@ -12,6 +12,9 @@ class AgentConfig(BaseModel):
     semantic_scholar_api_key: Optional[str] = None
     s2_base_url: str = "https://api.semanticscholar.org/graph/v1"
     crossref_base_url: str = "https://api.crossref.org"
+    perplexity_api_key: Optional[str] = None
+    perplexity_base_url: str = "https://api.perplexity.ai"
+    perplexity_model: str = "sonar"
 
     top_k_per_query: int = 8
     max_queries_per_claim: int = 6

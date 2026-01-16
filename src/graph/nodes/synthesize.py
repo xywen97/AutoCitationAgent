@@ -8,7 +8,10 @@ from rapidfuzz import fuzz
 from ..state import BibliographyEntry, GraphState
 from ...tools.bibtex_io import dedupe_bibkey, make_bibkey
 from ...tools.crossref import CrossrefClient
+from ...tools.logger import get_logger
 from ...tools.text_utils import normalize_title
+
+logger = get_logger(__name__)
 
 
 def _first_author_last(authors: list[str]) -> str:
@@ -44,9 +47,10 @@ def _resolve_doi_by_title(
 
 
 def synthesize_node(state: GraphState) -> GraphState:
-    print("[synthesize] resolving DOI and BibTeX")
+    logger.info("Resolving DOIs and fetching BibTeX entries")
     client = CrossrefClient(state.config.crossref_base_url, state.config.cache_dir)
     for claim_id, selected in state.selected_by_claim.items():
+        logger.debug("Processing %d papers for claim %s", len(selected.papers), claim_id)
         valid_papers = []
         for paper in selected.papers:
             doi = paper.doi
@@ -58,7 +62,14 @@ def synthesize_node(state: GraphState) -> GraphState:
             if doi.lower() in state.existing_doi_index:
                 valid_papers.append(paper)
                 continue
-            bibtex = client.bibtex_from_doi(doi)
+            try:
+                bibtex = client.bibtex_from_doi(doi)
+            except Exception as exc:
+                logger.warning("Failed to fetch BibTeX for DOI %s: %s", doi, exc)
+                continue
+            if not bibtex:
+                logger.warning("No BibTeX returned for DOI %s", doi)
+                continue
             author_last = _first_author_last(paper.authors)
             year = str(paper.year or "")
             title_word = _title_word(paper.title or "")
@@ -76,9 +87,15 @@ def synthesize_node(state: GraphState) -> GraphState:
             state.new_bib_entries[bibkey] = entry
             state.bib_entries_by_doi[doi.lower()] = entry
             valid_papers.append(paper)
+            logger.debug("Created BibTeX entry: %s (DOI: %s)", bibkey, doi)
         if not valid_papers:
+            logger.warning("Claim %s: No valid BibTeX entries (all papers missing DOI)", claim_id)
             selected.status = "NEED_MANUAL"
             selected.notes = "No reliable BibTeX (missing DOI)."
+        else:
+            logger.info("Claim %s: Resolved %d/%d papers with BibTeX", 
+                      claim_id, len(valid_papers), len(selected.papers))
         selected.papers = valid_papers
         state.selected_by_claim[claim_id] = selected
+    logger.info("Created %d new BibTeX entries", len(state.new_bib_entries))
     return state

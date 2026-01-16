@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 
 from .graph.build_graph import build_graph
 from .graph.state import AgentConfig, GraphState
+from .tools.logger import get_logger, setup_logging
+
+logger = get_logger(__name__)
 
 
 def _env_bool(key: str, default: bool = False) -> bool:
@@ -16,12 +19,23 @@ def _env_bool(key: str, default: bool = False) -> bool:
     return val.strip().lower() in {"1", "true", "yes", "y"}
 
 
+def _normalize_key(value: str | None) -> str | None:
+    if not value:
+        return None
+    if value.strip().lower() in {"optional_if_needed", "replace_me", "none", "null"}:
+        return None
+    return value
+
+
 def _build_config(args: argparse.Namespace) -> AgentConfig:
     config = AgentConfig(
-        openai_api_key=os.getenv("OPENAI_API_KEY"),
+        openai_api_key=_normalize_key(os.getenv("OPENAI_API_KEY")),
         openai_base_url=os.getenv("OPENAI_BASE_URL", "https://api.zhizengzeng.com/v1"),
         openai_model=os.getenv("OPENAI_MODEL", args.model or "gpt-5.2"),
-        semantic_scholar_api_key=os.getenv("SEMANTIC_SCHOLAR_API_KEY"),
+        perplexity_api_key=_normalize_key(os.getenv("PERPLEXITY_API_KEY")),
+        perplexity_base_url=os.getenv("PERPLEXITY_BASE_URL", "https://api.perplexity.ai"),
+        perplexity_model=os.getenv("PERPLEXITY_MODEL", "sonar"),
+        semantic_scholar_api_key=_normalize_key(os.getenv("SEMANTIC_SCHOLAR_API_KEY")),
         s2_base_url=os.getenv("S2_BASE_URL", "https://api.semanticscholar.org/graph/v1"),
         crossref_base_url=os.getenv("CROSSREF_BASE_URL", "https://api.crossref.org"),
         top_k_per_query=int(os.getenv("TOP_K_PER_QUERY", "8")),
@@ -46,6 +60,8 @@ def _build_config(args: argparse.Namespace) -> AgentConfig:
 
 def main() -> None:
     load_dotenv()
+    setup_logging()
+    
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", required=True, help="Path to LaTeX draft")
     parser.add_argument("--bib", required=False, help="Path to existing .bib file")
@@ -54,6 +70,9 @@ def main() -> None:
     args = parser.parse_args()
 
     config = _build_config(args)
+    logger.info("Starting citation agent pipeline")
+    logger.info("Input: %s, Output: %s", config.input_path, config.output_dir)
+    
     state = GraphState(config=config)
     graph = build_graph()
     result = graph.invoke(state)
@@ -62,6 +81,8 @@ def main() -> None:
     revised_path = os.path.join(config.output_dir, "revised.tex")
     with open(revised_path, "w", encoding="utf-8") as f:
         f.write(result.revised_text)
+    logger.info("Wrote revised LaTeX to %s", revised_path)
+    logger.info("Pipeline completed successfully")
 
 
 if __name__ == "__main__":

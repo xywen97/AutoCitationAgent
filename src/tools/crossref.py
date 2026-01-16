@@ -38,7 +38,12 @@ class CrossrefClient:
             return cached
         with httpx.Client(timeout=30.0) as client:
             resp = client.get(url)
-            resp.raise_for_status()
+            try:
+                resp.raise_for_status()
+            except httpx.HTTPStatusError:
+                if resp.status_code == 404:
+                    return ""
+                raise
             text = resp.text
         cache_set(self.cache_dir, key, text)
         time.sleep(0.2)

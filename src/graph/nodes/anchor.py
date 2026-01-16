@@ -3,10 +3,13 @@ from __future__ import annotations
 from ..prompts import ANCHOR_SYSTEM, ANCHOR_USER
 from ..state import GraphState
 from ...tools.llm import LlmClient
+from ...tools.logger import get_logger
+
+logger = get_logger(__name__)
 
 
 def anchor_node(state: GraphState) -> GraphState:
-    print("[anchor] summarizing topic and key terms")
+    logger.info("Analyzing document topic and extracting key terms")
     llm = LlmClient(
         api_key=state.config.openai_api_key,
         base_url=state.config.openai_base_url,

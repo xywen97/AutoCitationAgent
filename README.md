@@ -19,6 +19,9 @@ Copy `.env.example` to `.env` and set keys:
 OPENAI_API_KEY=...
 OPENAI_BASE_URL=https://api.zhizengzeng.com/v1
 OPENAI_MODEL=gpt-5.2
+PERPLEXITY_API_KEY=...
+PERPLEXITY_BASE_URL=https://api.perplexity.ai
+PERPLEXITY_MODEL=sonar
 ```
 
 ## Run

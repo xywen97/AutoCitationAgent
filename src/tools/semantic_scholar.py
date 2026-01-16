@@ -7,7 +7,10 @@ import httpx
 
 from ..graph.state import PaperCandidate
 from .caching import cache_get, cache_set
+from .logger import get_logger
 from .text_utils import normalize_title
+
+logger = get_logger(__name__)
 
 
 class SemanticScholarClient:
@@ -34,10 +37,13 @@ class SemanticScholarClient:
                 resp.raise_for_status()
             except httpx.HTTPStatusError as exc:
                 if resp.status_code == 403:
-                    raise RuntimeError(
+                    error_msg = (
                         "Semantic Scholar returned 403. "
                         "Set SEMANTIC_SCHOLAR_API_KEY or reduce request rate."
-                    ) from exc
+                    )
+                    logger.error(error_msg)
+                    raise RuntimeError(error_msg) from exc
+                logger.error("Semantic Scholar API error: %s", exc)
                 raise
             data = resp.json()
         cache_set(self.cache_dir, key, data)
