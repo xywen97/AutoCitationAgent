@@ -33,14 +33,24 @@ def insert_node(state: GraphState) -> GraphState:
         keys = []
         if selected.papers:
             for p in selected.papers:
+                # Try DOI match first (existing entries)
                 if p.doi and p.doi.lower() in state.existing_doi_index:
                     keys.append(state.existing_doi_index[p.doi.lower()])
+                # Try DOI match (new entries)
                 elif p.doi and p.doi.lower() in state.bib_entries_by_doi:
                     keys.append(state.bib_entries_by_doi[p.doi.lower()].bibkey)
+                # Try URL match (existing entries)
+                elif p.url and p.url.lower() in state.existing_url_index:
+                    keys.append(state.existing_url_index[p.url.lower()])
+                # Try URL match (new entries)
+                elif p.url and p.url.lower() in state.bib_entries_by_url:
+                    keys.append(state.bib_entries_by_url[p.url.lower()].bibkey)
                 else:
-                    # Fallback: match by DOI in new_bib_entries
+                    # Fallback: match by DOI or URL in new_bib_entries
                     for k, entry in state.new_bib_entries.items():
-                        if entry.doi and p.doi and entry.doi.lower() == p.doi.lower():
+                        if p.doi and entry.doi and entry.doi.lower() == p.doi.lower():
+                            keys.append(k)
+                        elif p.url and entry.url and entry.url.lower() == p.url.lower():
                             keys.append(k)
         keys = [k for k in keys if k in valid_keys]
         

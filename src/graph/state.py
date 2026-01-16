@@ -129,6 +129,7 @@ class GraphState(BaseModel):
     candidates_by_claim: Dict[str, List[PaperCandidate]] = Field(default_factory=dict)
     selected_by_claim: Dict[str, SelectedForClaim] = Field(default_factory=dict)
     bib_entries_by_doi: Dict[str, BibliographyEntry] = Field(default_factory=dict)
+    bib_entries_by_url: Dict[str, BibliographyEntry] = Field(default_factory=dict)
     revised_text: str = ""
     references_bib: str = ""
     report: Dict[str, object] = Field(default_factory=dict)
@@ -141,5 +142,6 @@ class GraphState(BaseModel):
     bib_path: str = ""
     existing_bib_entries: Dict[str, BibliographyEntry] = Field(default_factory=dict)
     existing_doi_index: Dict[str, str] = Field(default_factory=dict)
+    existing_url_index: Dict[str, str] = Field(default_factory=dict)
     new_bib_entries: Dict[str, BibliographyEntry] = Field(default_factory=dict)
     bib_write_mode: Literal["inplace", "output_dir_only"] = "inplace"

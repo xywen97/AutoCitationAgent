@@ -56,6 +56,8 @@ def parse_existing_cites_node(state: GraphState) -> GraphState:
     for bibkey, entry in state.existing_bib_entries.items():
         if entry.doi:
             state.existing_doi_index[entry.doi.lower()] = bibkey
+        if entry.url:
+            state.existing_url_index[entry.url.lower()] = bibkey
     state.seed_papers = _build_seed_papers(state)
     if state.seed_papers:
         logger.info("[parse_existing_cites] Resolved %d seed papers for expansion", len(state.seed_papers))
