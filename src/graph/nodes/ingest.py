@@ -29,7 +29,7 @@ def _detect_bib_path(tex_text: str, input_path: str) -> tuple[str, list[str]]:
 
 
 def ingest_node(state: GraphState) -> GraphState:
-    logger.info("Loading input from %s", state.config.input_path)
+    logger.info("[ingest] Loading input from %s", state.config.input_path)
     input_path = state.config.input_path
     if not input_path:
         raise ValueError("input_path is required")
@@ -46,11 +46,11 @@ def ingest_node(state: GraphState) -> GraphState:
     state.bib_path = bib_path
 
     if not os.path.exists(bib_path):
-        logger.info("Creating new BibTeX file at %s", bib_path)
+        logger.info("[ingest] Creating new BibTeX file at %s", bib_path)
         os.makedirs(os.path.dirname(bib_path) or ".", exist_ok=True)
         with open(bib_path, "w", encoding="utf-8") as f:
             f.write("% Auto-created by auto_citation_agent\n\n")
     else:
-        logger.info("Using existing BibTeX file at %s", bib_path)
+        logger.info("[ingest] Using existing BibTeX file at %s", bib_path)
 
     return state

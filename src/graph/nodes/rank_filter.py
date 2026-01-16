@@ -63,7 +63,7 @@ def _score_batch(llm: LlmClient, claim_text: str, batch: List[PaperCandidate]) -
 
 
 def rank_filter_node(state: GraphState) -> GraphState:
-    logger.info("Scoring and filtering paper candidates")
+    logger.info("[rank_filter] Scoring and filtering paper candidates")
     llm = LlmClient(
         api_key=state.config.openai_api_key,
         base_url=state.config.openai_base_url,
@@ -72,7 +72,7 @@ def rank_filter_node(state: GraphState) -> GraphState:
     selected = {}
     for claim in state.claims:
         candidates = state.candidates_by_claim.get(claim.cid, [])
-        logger.info("Scoring %d candidates for claim %s", len(candidates), claim.cid)
+        logger.info("[rank_filter] Scoring %d candidates for claim %s", len(candidates), claim.cid)
         scored = []
         for i in range(0, len(candidates), 8):
             batch = candidates[i : i + 8]
@@ -104,13 +104,13 @@ def rank_filter_node(state: GraphState) -> GraphState:
         ][: state.config.select_top_n]
         if not chosen:
             notes = "No candidates met thresholds. Provide manual review."
-            logger.warning("Claim %s: No papers met thresholds (support>=%.2f, final>=%.2f)", 
+            logger.warning("[rank_filter] Claim %s: No papers met thresholds (support>=%.2f, final>=%.2f)", 
                          claim.cid, state.config.support_score_min, state.config.final_score_threshold)
             selected[claim.cid] = SelectedForClaim(
                 cid=claim.cid, papers=scored[:5], status="NEED_MANUAL", notes=notes
             )
         else:
-            logger.info("Claim %s: Selected %d papers (top scores: %s)", 
+            logger.info("[rank_filter] Claim %s: Selected %d papers (top scores: %s)", 
                       claim.cid, len(chosen), 
                       ", ".join(f"{p.final:.2f}" for p in chosen[:3]))
             selected[claim.cid] = SelectedForClaim(cid=claim.cid, papers=chosen, status="OK", notes="")

@@ -13,7 +13,7 @@ def _todo_comment(claim_type: str, rationale: str, queries: list[str]) -> str:
 
 
 def insert_node(state: GraphState) -> GraphState:
-    logger.info("Inserting citations and TODO comments into LaTeX")
+    logger.info("[insert] Inserting citations and TODO comments into LaTeX")
     valid_keys = set(state.existing_bib_entries.keys()) | set(state.new_bib_entries.keys())
     sent_map = {s.sid: s for s in state.sentences}
     needs_map = {n.sid: n for n in state.citation_needs}
@@ -44,10 +44,10 @@ def insert_node(state: GraphState) -> GraphState:
                 continue
             if "\\cite" in sentence.text:
                 new_sentence = append_cite(sentence.text, keys)
-                logger.debug("Appended citations %s to existing cite in sentence %s", keys, sid)
+                logger.debug("[insert] Appended citations %s to existing cite in sentence %s", keys, sid)
             else:
                 new_sentence = insert_cite_at_sentence_end(sentence.text, keys)
-                logger.debug("Inserted new citations %s at end of sentence %s", keys, sid)
+                logger.debug("[insert] Inserted new citations %s at end of sentence %s", keys, sid)
             replacements[(sentence.start, sentence.end)] = new_sentence
         elif selected.status == "NEED_MANUAL" and state.config.insert_todo_comment:
             claim_type = need.claim_type if need else "unknown"
@@ -58,14 +58,14 @@ def insert_node(state: GraphState) -> GraphState:
                 new_sentence += " "
             new_sentence += todo
             replacements[(sentence.start, sentence.end)] = new_sentence
-            logger.debug("Added TODO comment for sentence %s", sid)
+            logger.debug("[insert] Added TODO comment for sentence %s", sid)
 
     if not replacements:
-        logger.info("No citations to insert")
+        logger.info("[insert] No citations to insert")
         state.revised_text = state.raw_text
         return state
     
-    logger.info("Applying %d citation insertions", len(replacements))
+    logger.info("[insert] Applying %d citation insertions", len(replacements))
 
     parts = []
     last = 0

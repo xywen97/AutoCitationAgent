@@ -44,7 +44,7 @@ def _build_seed_papers(state: GraphState) -> List[SeedPaper]:
 
 
 def parse_existing_cites_node(state: GraphState) -> GraphState:
-    logger.info("Extracting existing citations and BibTeX entries")
+    logger.info("[parse_existing_cites] Extracting existing citations and BibTeX entries")
     state.existing_cites = extract_cite_commands(state.raw_text)
     keys = []
     for span in state.existing_cites:
@@ -52,11 +52,11 @@ def parse_existing_cites_node(state: GraphState) -> GraphState:
     state.existing_bibkeys = set(normalize_bibkeys(keys))
 
     state.existing_bib_entries = read_bibtex(state.bib_path)
-    logger.info("Found %d existing BibTeX entries", len(state.existing_bib_entries))
+    logger.info("[parse_existing_cites] Found %d existing BibTeX entries", len(state.existing_bib_entries))
     for bibkey, entry in state.existing_bib_entries.items():
         if entry.doi:
             state.existing_doi_index[entry.doi.lower()] = bibkey
     state.seed_papers = _build_seed_papers(state)
     if state.seed_papers:
-        logger.info("Resolved %d seed papers for expansion", len(state.seed_papers))
+        logger.info("[parse_existing_cites] Resolved %d seed papers for expansion", len(state.seed_papers))
     return state

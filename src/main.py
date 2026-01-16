@@ -77,10 +77,16 @@ def main() -> None:
     graph = build_graph()
     result = graph.invoke(state)
 
+    # LangGraph returns a dict, not the GraphState object
+    if isinstance(result, dict):
+        revised_text = result.get("revised_text", "")
+    else:
+        revised_text = result.revised_text
+
     os.makedirs(config.output_dir, exist_ok=True)
     revised_path = os.path.join(config.output_dir, "revised.tex")
     with open(revised_path, "w", encoding="utf-8") as f:
-        f.write(result.revised_text)
+        f.write(revised_text)
     logger.info("Wrote revised LaTeX to %s", revised_path)
     logger.info("Pipeline completed successfully")
 

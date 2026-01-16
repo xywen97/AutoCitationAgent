@@ -10,7 +10,7 @@ logger = get_logger(__name__)
 
 
 def report_node(state: GraphState) -> GraphState:
-    logger.info("Generating citation report")
+    logger.info("[report] Generating citation report")
     os.makedirs(state.config.output_dir, exist_ok=True)
 
     existing_bib_count = len(state.existing_bib_entries)
@@ -54,7 +54,7 @@ def report_node(state: GraphState) -> GraphState:
     json_path = os.path.join(state.config.output_dir, "report.json")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(state.report, f, ensure_ascii=True, indent=2)
-    logger.info("Wrote JSON report to %s", json_path)
+    logger.info("[report] Wrote JSON report to %s", json_path)
 
     md_path = os.path.join(state.config.output_dir, "report.md")
     with open(md_path, "w", encoding="utf-8") as f:
@@ -84,6 +84,6 @@ def report_node(state: GraphState) -> GraphState:
                     f"  - {p.get('title')} ({p.get('year')}) DOI={p.get('doi')} score={p.get('final')}\n"
                 )
             f.write("\n")
-    logger.info("Wrote Markdown report to %s", md_path)
+    logger.info("[report] Wrote Markdown report to %s", md_path)
 
     return state

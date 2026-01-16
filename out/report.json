@@ -1,104 +1,127 @@
 {
   "anchor_summary": {
-    "topic": "Formal verification and control mechanisms for AI agent orchestration",
+    "topic": "Symbolic Governor in agent systems",
     "subareas": [
-      "AI agent architectures",
-      "Formal methods in software verification",
-      "Runtime policy enforcement",
-      "Human-in-the-loop and hybrid AI systems",
-      "Security and access control in AI systems"
+      "formal verification",
+      "deterministic programming",
+      "agent-based systems",
+      "trust in AI"
     ],
     "key_terms": [
       "Symbolic Governor",
-      "System 2 cognition",
-      "Agent Constitution",
-      "Scheduler Interception",
-      "Probabilistic CPU",
-      "Policy Engine",
-      "Reference Monitor",
-      "Resource Limits",
-      "Taint Checks",
-      "Access Control Lists (ACLs)",
-      "Deterministic code",
-      "Formal verification"
+      "System 2",
+      "root of trust",
+      "deterministic code",
+      "formal verification",
+      "LLM"
     ],
     "likely_venues": [
-      "ACM Conference on Autonomous Agents and Multiagent Systems (AAMAS)",
-      "International Conference on Autonomous Agents and Multiagent Systems",
-      "IEEE Symposium on Security and Privacy",
-      "USENIX Security Symposium",
-      "International Conference on Software Engineering (ICSE)",
-      "International Joint Conference on Artificial Intelligence (IJCAI)",
-      "AAAI Conference on Artificial Intelligence"
+      "Artificial Intelligence Journal",
+      "Journal of Automated Reasoning",
+      "ACM Transactions on Intelligent Systems and Technology",
+      "IEEE Transactions on Neural Networks and Learning Systems"
     ],
     "exclusions": [
-      "Purely probabilistic or black-box AI models without formal guarantees",
-      "General natural language processing without agent control focus",
-      "Hardware-level CPU design unrelated to AI agent orchestration",
-      "Non-deterministic runtime environments without policy enforcement"
+      "non-deterministic systems",
+      "purely statistical models",
+      "unverified AI systems"
     ]
   },
   "existing_citations_count": 0,
   "seed_expansion_used": false,
   "bib_path": "cases\\references.bib",
-  "existing_entries_count": 0,
-  "new_entries_added_count": 6,
+  "existing_entries_count": 5,
+  "new_entries_added_count": 3,
   "new_bibkeys_added": [
-    "UnknownIntents",
-    "UnknownThe",
-    "UnknownAgent",
-    "UnknownVerification",
-    "UnknownFormal",
-    "UnknownAgenta"
+    "UnknownMoving",
+    "UnknownEstablishing",
+    "UnknownUniversity"
   ],
   "warnings": [],
   "claims": [
     {
       "sid": "S0",
       "sentence": "The Symbolic Governor acts as the \"System 2\" component of the agent.",
-      "rationale": "The sentence defines the role of the Symbolic Governor as the 'System 2' component, which is a specific conceptual claim requiring citation to prior work or authoritative source.",
+      "rationale": "The statement defines the role of the Symbolic Governor, which is a specific concept that requires citation for clarity and validation.",
       "claim_type": "definition",
       "queries": [
-        "Symbolic Governor as System 2 cognition in AI agent architectures",
-        "Formal verification of Symbolic Governor in agent orchestration",
-        "Role of Symbolic Governor in runtime policy enforcement for AI agents",
-        "Agent Constitution and Scheduler Interception with Symbolic Governor",
-        "Policy Engine and Reference Monitor integration with Symbolic Governor",
-        "Formal methods for System 2 components in hybrid AI systems"
+        "Symbolic Governor in agent systems",
+        "formal verification of deterministic programming in agent-based systems",
+        "trust in AI and the role of Symbolic Governor",
+        "System 2 and its impact on agent decision-making",
+        "deterministic code in AI systems with Symbolic Governor"
       ],
-      "selected": [],
+      "selected": [
+        {
+          "paper_id": null,
+          "title": "Moving Beyond System 1 and System 2",
+          "authors": [],
+          "year": null,
+          "venue": null,
+          "abstract": "In this paper, I argue that the impact of relational knowledge is more widespread than dual-system models imply. More specifically, I review evidence suggesting that also Pavlovian conditioning, implicit evaluation, and habitual responding are mediated by relational knowledge. Considering the idea that relational knowledge underlies also fast, unintentional, unconscious, and seemingly associative psychological phenomena is not only theoretically important but also reveals new opportunities for influencing thinking and behavior.... For instance, Kahneman (2011) distinguishes between System 1 and System 2 thinking not only on the basis of speed (fast vs. slow) but also in terms of intentionality (unintentional vs. intentional), consciousness (unconscious vs. conscious), and the nature of processing (associative vs. propositional). This implies that all fast thinking is also unintentional, unconscious, and associative whereas all slow thinking is also intentional, conscious, and propositional.... Most relevant for the present paper, dual-system models foster the idea that relational knowledge is important only for System 2-type thinking (i.e., thinking that is slow, intentional, conscious, and propositional).... Indeed, the conclusion that relational knowledge is relevant for System 2 but not System 1 follows naturally from the assumptions that (1) there are two cognitive systems with multiple opposing properties (i.e., the dual-system alignment assumption), (2) higher order cognition such as reasoning, language, and planning are instances of System 2 thinking (e.g., Kahneman, 2011), and (3) higher order cognition relies on relational knowledge.... automatic and seemingly irrational ways of thinking and behaving can result in new\nways of tackling psychological problems.\n\n## Evidence for a Widespread Impact of Relational Knowledge... Second, research revealed that instructions can influence implicit evaluations even in the absence of changes in explicit evaluations (Van Dessel, De Houwer, Gast, Smith, & De Schryver, 2016). Third, to the extent that instructions provide diagnostic and credible information, they can alter even long-standing, deeply rooted implicit evaluations.... This pattern of results could reflect the joint impact of propositions and associations on implicit evaluations but it could also reflect the joint impact of multiple propositions on implicit evaluations, some based on pairings (e.g., \u201cthis person co-occurred with positive traits\u201d) and some based on relational information (e.g., \u201cthis person is good because he was paired with negative traits\u201d; De Houwer, 2018b; Moran et al., 2016).",
+          "doi": "10.1027/1618-3169/a000450",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7037735/",
+          "citation_count": null,
+          "source": "perplexity",
+          "seed_boost": 0.0,
+          "relevance": 0.5,
+          "support": 0.5,
+          "authority": 0.2,
+          "final": 0.45499999999999996,
+          "evidence_snippet": "dual-system models foster the idea that relational knowledge is important only for System 2-type thinking",
+          "why": "The paper discusses the distinction between System 1 and System 2 thinking, suggesting that relational knowledge is primarily associated with System 2. This supports the claim that the Symbolic Governor acts as the System 2 component."
+        }
+      ],
       "status": "NEED_MANUAL",
-      "notes": "No reliable BibTeX (missing DOI)."
+      "notes": "No candidates met thresholds. Provide manual review."
     },
     {
       "sid": "S1",
       "sentence": "It is the root of trust.",
-      "rationale": "The phrase 'root of trust' is a technical term that typically requires citation to clarify its specific meaning and context.",
+      "rationale": "The phrase 'root of trust' is a specific term that requires citation to clarify its meaning and context.",
       "claim_type": "definition",
       "queries": [
-        "Symbolic Governor as root of trust in AI agent orchestration",
-        "Formal verification of Policy Engine and Reference Monitor in AI systems",
-        "Scheduler Interception and access control lists for secure AI agent architectures",
-        "Runtime policy enforcement with Symbolic Governor and System 2 cognition",
-        "Formal methods for ensuring root of trust in AI agent control mechanisms",
-        "Resource Limits and Taint Checks in formally verified AI agent orchestration"
+        "Symbolic Governor in agent systems for formal verification",
+        "deterministic programming and trust in AI using Symbolic Governor",
+        "root of trust in agent-based systems with deterministic code",
+        "formal verification techniques for Symbolic Governor in AI",
+        "LLM and Symbolic Governor in the context of trust in AI"
       ],
-      "selected": [],
+      "selected": [
+        {
+          "paper_id": null,
+          "title": "Establishing Software Root of Trust Unconditionally",
+          "authors": [],
+          "year": null,
+          "venue": null,
+          "abstract": "Note that a verifier can use neither Cm,t computations\nthat have asymptotic lower bounds nor ones that have only\ntheoretical ones; i.e., bounds that cannot be matched by any\nprogram, as illustrated below. If Cm,t\u2019s lower bounds are\nasymptotic, a verifier can never prove that an adversary is... an adversary\u2019s code couldn\u2019t execute faster than the measured\ntime, which renders verification meaningless. If the memory\n2... Verifier Protocol Atomicity \n    concurrent \n    transaction \norder & duration \n verifiable  \ncontrol flow \n Code Optimality \nscalable  \nbounds \nunpredictable \n       result \n     code \ncomposition \nTime Measurement Security \nLegend:            denotes a dependency \nFig. 1: RoT Establishment on an Untrusted System... They also assure bounds scalability5, which enables the verifier\nto satisfy the transaction order and duration requirement and\nleads to the establishment of malware-free states on a multi-\ndevice system (Theorem 7). Finally, the verifier uses ordinary\nuniversal hash functions to establish RoT in malware-free\nstates (Theorem 8).... Pd(x) = (\u00b7 \u00b7 \u00b7 (ad\u00d7x+ad\u22121)\u00d7x+\u00b7 \u00b7 \u00b7+a1)\u00d7x+a0 (mod p).\nHorner-rule step and programs. A program that evaluates\nai \u00d7 x + ai\u22121 (mod p) as a sequence of four instructions... One time, honest evaluation. Polynomial Pd(x) is evaluated\none time if nothing is known about coefficients ai and input\nx before the evaluation starts; i.e., ai and x are variables.\nThe evaluation of Pd(x) is honest if its program code is\nfixed before constants are assigned to variables ai and x (i.e.,... its evaluation requires a unique two-instruction loop-control\nsequence that must iterate d times over the Horner-rule step.\nA similar proof holds over Fq when q > 2 is a prime\npower. To illustrate, we outline it for the important case q =\n2w\u22121. Here the Horner-rule program needs only d + 8 words... of m. If t needs to be large, d becomes large. Hence not all\nd+1 coefficients of Pd could always be input at the same time;\ne.g., in one packet. This would enable an adversary\u2019s code to\npre-process the coefficients that arrive early and circumvent the\noptimal bounds; e.g., with pre-processing, the lower bound for",
+          "doi": "10.14722/ndss.2019.23170",
+          "url": "https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_10-4_Gligor_paper.pdf",
+          "citation_count": null,
+          "source": "perplexity",
+          "seed_boost": 0.0,
+          "relevance": 0.5,
+          "support": 0.5,
+          "authority": 0.4,
+          "final": 0.485,
+          "evidence_snippet": "",
+          "why": "This paper explores the role of trust in software agents but does not focus on the foundational aspect of a root of trust."
+        }
+      ],
       "status": "NEED_MANUAL",
-      "notes": "No reliable BibTeX (missing DOI)."
+      "notes": "No candidates met thresholds. Provide manual review."
     },
     {
       "sid": "S2",
       "sentence": "Unlike the LLM, the Governor is implemented in deterministic code (e.",
-      "rationale": "The claim about the Governor being implemented in deterministic code is a specific technical detail that requires verification.",
+      "rationale": "The statement makes a factual claim about the implementation of the Governor in deterministic code, which requires citation.",
       "claim_type": "method_description",
       "queries": [
-        "Symbolic Governor deterministic code formal verification",
-        "Formal verification of AI agent orchestration with Symbolic Governor",
-        "Deterministic code in AI agent control mechanisms",
-        "Policy Engine and Reference Monitor in AI agent orchestration",
-        "Scheduler Interception and runtime policy enforcement in AI systems",
-        "Formal methods for resource limits and access control in AI agents"
+        "Symbolic Governor in agent systems",
+        "formal verification of deterministic programming in AI",
+        "trust in AI with Symbolic Governor",
+        "deterministic code in agent-based systems",
+        "root of trust in Symbolic Governor implementations"
       ],
       "selected": [],
       "status": "NEED_MANUAL",
@@ -107,235 +130,34 @@
     {
       "sid": "S3",
       "sentence": "g., Python, Rust) and is formally verifiable.",
-      "rationale": "The claim that the language (Python, Rust) is formally verifiable is a factual claim that requires citation to support formal verification status.",
+      "rationale": "The statement refers to programming languages and formal verifiability, which are factual claims that require citation.",
       "claim_type": "prior_work",
       "queries": [
-        "Formal verification of AI agent orchestration in Python and Rust",
-        "Symbolic Governor and formal methods for AI agent control",
-        "Runtime policy enforcement and Scheduler Interception in AI systems",
-        "Formal verification of Policy Engine and Reference Monitor in AI agents",
-        "Access Control Lists and Taint Checks for secure AI agent orchestration",
-        "Deterministic code and System 2 cognition in formally verifiable AI architectures"
-      ],
-      "selected": [],
-      "status": "NEED_MANUAL",
-      "notes": "No reliable BibTeX (missing DOI)."
-    },
-    {
-      "sid": "S4",
-      "sentence": "It is responsible for the high-level orchestration of the agent's workflow and the strict enforcement of the Agent Constitution.",
-      "rationale": "The sentence describes a specific responsibility and enforcement mechanism of the Agent Constitution, which is a technical claim requiring citation to prior work or formal specification.",
-      "claim_type": "method_description",
-      "queries": [
-        "Agent Constitution enforcement in AI agent orchestration",
-        "Formal verification of high-level AI agent workflow control",
-        "Symbolic Governor for strict policy enforcement in AI agents",
-        "Scheduler Interception and Policy Engine in agent orchestration",
-        "Reference Monitor role in AI agent workflow management",
-        "Formal methods for runtime policy enforcement in multiagent systems"
-      ],
-      "selected": [],
-      "status": "NEED_MANUAL",
-      "notes": "No reliable BibTeX (missing DOI)."
-    },
-    {
-      "sid": "S5",
-      "sentence": "The Governor implements a Scheduler Interception mechanism.",
-      "rationale": "The sentence describes a specific mechanism implemented by the Governor, which is a technical claim requiring citation to support the method's existence or details.",
-      "claim_type": "method_description",
-      "queries": [
-        "Governor Scheduler Interception formal verification AI agent orchestration",
-        "Symbolic Governor Scheduler Interception policy enforcement AI systems",
-        "Formal methods Scheduler Interception in AI agent architectures",
-        "Runtime policy enforcement Scheduler Interception Governor AI",
-        "Scheduler Interception and Reference Monitor in AI agent control",
-        "Formal verification of Scheduler Interception mechanisms in AI agents"
-      ],
-      "selected": [],
-      "status": "NEED_MANUAL",
-      "notes": "No reliable BibTeX (missing DOI)."
-    },
-    {
-      "sid": "S7",
-      "sentence": "In ArbiterOS, the LLM emits an intent to call a tool.",
-      "rationale": "The sentence describes a specific mechanism in ArbiterOS involving LLM intent emission, which is a technical detail requiring citation to support the claim.",
-      "claim_type": "method_description",
-      "queries": [
-        "ArbiterOS LLM intent tool call formal verification",
-        "Symbolic Governor tool invocation in AI agent orchestration",
-        "Formal methods for intent emission in AI agent systems",
-        "Policy Engine and Scheduler Interception for tool calls in ArbiterOS",
-        "Runtime policy enforcement for LLM tool invocation",
-        "Reference Monitor and access control in AI agent tool calls"
+        "Symbolic Governor in agent systems formal verification",
+        "deterministic programming Symbolic Governor root of trust",
+        "trust in AI Symbolic Governor agent-based systems",
+        "formal verification of deterministic code in AI systems",
+        "LLM and Symbolic Governor in agent systems"
       ],
       "selected": [
         {
           "paper_id": null,
-          "title": "Intents",
+          "title": "University of Birmingham",
           "authors": [],
           "year": null,
           "venue": null,
-          "abstract": "## Add Intents and Utterances\n\n### Utterances overview\n\nUtterances are specific phrases or queries users use to express intentions. By mapping utterances to corresponding intents, the AI-agent can accurately understand and respond to user queries.\n\nYou can add intents (the purpose of the AI-agent users' responses) and utterances (the various ways users might phrase a specific intent, such as 'flight booking' or 'book flights' for the intent of booking a flight). You need to train the AI-agent to identify and understand these sentences to ensure accurate responses.... ### Best practices for creating intents and uttrances\n\nTo ensure accuracy and effectiveness of your AI-agent, adhere to these best practices while creating intents and utterances:\n\n- To effectively train the intents, ensure you create at least two distinct intents.\n\n- We recommend adding at least 15 to 20 diverse utterances for each intent.\n\n- Avoid using similar utterances both within a single flow and across multiple flows.\n\n- Ensure that all utterances in flows are unique to maintain clarity and accuracy.... ## Trigger flows using intents\n\nTo trigger a flow based on a specific intent, follow these steps:\n\n\n\nNavigate to the respective flow and click on the Start node.\n\n\n\nChoose\n\n**Intent**as the trigger type.\n\n\n\nSelect the desired intent from the drop-down.... Click\n\n**Test your bot**, enter the name of the intent that you have created, then click on **Send**icon.\n\n- This will generate code to display the AI-agent's response to that intent.\n\nIn the example code below, the AI-agent confidently recognizes the phrase as part of the\n\n**order intent**, with a confidence score of 0.999.\n\n`{`\n\n\"text\": \"place order.\",\n\n\"intents\": {\n\n\"order\": 0.999\n\n},\n\n\"global_model\": {},\n\n\"intent\": \"order\",\n\n\"confidence\": 0.999,\n\n\"global_entities\": [],\n\n\"entities\": {}... ## Stop or exit AI-agent conversations using intents\n\nYou can configure your AI-agent to stop or exit conversations using specific intents and utterances. Follow these steps to set up this functionality:\n\n\n\n- Create intents such as \"stop the flow\" or \"exit the flow\".\n\n- Add corresponding utterances that users might use to indicate they want to end the conversation.\n\n- Train the AI-agent on these intents and utterances.\n\n\n\n- Go to the flow creation section.\n\n- Create a new flow and set the previously created intent as the start trigger.",
-          "doi": "10.1007/978-1-4842-6914-5_4",
-          "url": "https://docs.yellow.ai/docs/platform_concepts/studio/train/intents",
+          "abstract": "Root-of-trust abstractions for symbolic analysis\nFotiadis, Georgios; Moreira-Sanchez, Jose; Giannetsos, Thanassis; Chen, Liqun; Ronne,\nPeter B.; Ryan, Mark; Ryan, Peter Y.A.\nDOI:\n10.1007/978-3-030-91859-0_9... Root-of-Trust Abstractions for Symbolic\nAnalysis: Application to Attestation Protocols\nGeorgios Fotiadis1, Jos\u00b4e Moreira2, Thanassis Giannetsos3, Liqun Chen4,\nPeter B. R\u00f8nne1, Mark D. Ryan2, and Peter Y.A. Ryan1... and verification of the the Direct Anonymous Attestation (DAA) protocol of\nthe TPM. On the other hand, Delaune et al. [10], propose a Horn-clause frame-\nwork where they prove its soundness and use ProVerif to approximate the TPM\ninternal state space, helping to address non-termination issues.... perspective of formally verifying RoT-based applications, this model represents\na means of reasoning about security and privacy (of offered services) without\nbeing bogged down by the intricacies of various crypto primitives considered\nin the different platforms. We conduct our analysis in the symbolic model of\ncryptography (Dolev-Yao adversary [11]) through the Tamarin prover [4] and its... refer the reader to [24,25,26,3,21,14].\n2.1\nThe TPM as a Root of Trust\nThe Trusted Computing Group (TCG) splits the responsibility of the RoT into\nthree categories: measurement, storage and reporting [24]. The RoT for mea-\nsurement is usually the first piece of BIOS code that is executed on the main... processor during boot, and starts a chain of measurements. The RoT for storage\nand reporting are responsibilities assigned to the TPM, typically implemented\nas a tamper-resistant hardware embedded in a host device. The TPM and the\nhost device form a platform.\nA measurement chain of trust is a mechanism that allows to establish trust... authorization values or policies, and to maintain state between subsequent com-\nmands. To load or use a TPM object a session must be created, and the user will\nindicate what assertions must be checked. The TPM checks the assertions and\nupdates the session attribute policyDigest (a hash chain) if they succeed. If",
+          "doi": "10.1038/165303c0",
+          "url": "https://pure-oai.bham.ac.uk/ws/portalfiles/portal/159106790/ESORICS_2021_paper.pdf",
           "citation_count": null,
           "source": "perplexity",
           "seed_boost": 0.0,
           "relevance": 0.4,
-          "support": 0.2,
-          "authority": 0.5,
-          "final": 0.315,
-          "evidence_snippet": "The LLM proposes an action or plan... The system simulates the effect as a state transition... The transition is committed only if valid.",
-          "why": "Discusses formal verification of agent actions and tool invocations, indicating LLMs propose actions, but does not mention ArbiterOS or explicit intent emission."
-        },
-        {
-          "paper_id": null,
-          "title": "The Reasons that Agents Act: Intention and Instrumental Goals",
-          "authors": [],
-          "year": null,
-          "venue": null,
-          "abstract": "operationalise the intention with which an agent acts, relating to\nthe reasons it chooses its decision. We introduce a formal defini-\ntion of intention in structural causal influence models, grounded\nin the philosophy literature on intent and applicable to real-world\nmachine learning systems. Through a number of examples and\nresults, we show that our definition captures the intuitive notion of... intent and satisfies desiderata set-out by past work. In addition, we\nshow how our definition relates to past concepts, including actual\ncausality, and the notion of instrumental goals, which is a core idea\nin the literature on safe AI agents. Finally, we demonstrate how\nour definition can be used to infer the intentions of reinforcement... \u201cknows\", and \u201cintends\". By offering a behaviourally testable defi-\nnition of intention, we get around these problems, allowing the\nintentions of artificial systems to be characterised with precision\nusing intuitively understandable language.\nWe formalise the intention with which an agent acts, as when I\nwrite with the intention of finishing this paper [36]. This conception... of intent relates to the reasons that an agent chooses its decision,\nand importantly captures instrumental goals, which are a key notion\nin the literature on safe AI agents [4, 13, 26]. Informally, an agent\nintends to cause an outcome with its action, if guaranteeing that\nanother action would cause the outcome would make that action... evaluating an agent\u2019s intentions. A number of examples from the\nliterature on philosophy and AI demonstrate that our operational-\nisation captures the common-sense notion of intent and satisfies\nseveral desiderata for a definition of algorithmic intent set out by\nAshton [2]. Then, after discussing the background on SCIMs in... soundness and completeness results for graphical criteria of inten-\ntion in SCIMs, which are identical to the criteria for an ICI [13]. This\nis a key result which shows that our notion of intention corresponds\nto instrumental goals, which have been widely discussed in the lit-\nerature on safe AI [4, 27]. Next, in Section 6, we provide a purely... in the appendix of the arxiv version of this paper [? ].\n2\nOPERATIONALISING INTENTION\nIn this section we operationalise intention in three steps of increas-\ning refinement. Several examples demonstrate that our operational-\nisations capture the philosophical and common-sense concept and\nsatisfy desiderata for a definition of intent suitable for algorithms",
-          "doi": "10.65109/vzce5163",
-          "url": "http://arxiv.org/pdf/2402.07221.pdf",
-          "citation_count": null,
-          "source": "perplexity",
-          "seed_boost": 0.0,
-          "relevance": 0.4,
-          "support": 0.2,
-          "authority": 0.5,
-          "final": 0.315,
-          "evidence_snippet": "The LLM proposes an action or plan... The system simulates the effect as a state transition... The transition is committed only if valid.",
-          "why": "Discusses formal verification of agent actions and tool invocations, indicating LLMs propose actions, but does not mention ArbiterOS or explicit intent emission."
-        },
-        {
-          "paper_id": null,
-          "title": "Agent-Based Explanations in AI: Towards an Abstract Framework",
-          "authors": [],
-          "year": null,
-          "venue": null,
-          "abstract": "In this paper, we propose an abstract framework for XAI relying on notions and results from the MAS literature. The framework is mostly targetting sub-symbolic AI and ML-based intelligent systems. In particular, our framework introduces a clear distinction among two orthogonal, yet interrelated, activities \u2013 i.e., *interpretation* and *explanation* \u2013 which can be performed on sub-symbolic predictors to make them more understandable in the eyes of human beings. Thus, it provides a formal definition for such activities in the MAS perspective, thus stressing the *objective* nature of explanation, other than the *subjective* nature of interpretation.... According to this classification, while interpretable systems can be inspected to be understood \u2013 thus letting observer draw their explanations by themselves\u2013comprehensible systems must explicitly provide a symbolic explanation of their functioning. The focus is thus on *who* produces explanations, rather than *how*.... ## Explanation vs. Interpretation\n\nThis section introduces the preliminary notions, intuitions, and notations we leverage upon in Sect.\u00a03.1 and subsequent sections, in order to formalise our abstract framework for agent-based explanations. We start by providing an intuition for the notion of *interpretation*, and, consequently, for the *act* of interpreting something. Accordingly, we provide an intuition for the property of \u201cbeing interpretable\u201d as well, stressing its comparative nature. Analogously to what we did with *interpretation*, we then provide intuitions for terms such as *explanation* and its derivatives.... Summarising, we stress the subjective nature of interpretations, as agents assign them to objects according to their State of Mind (SoM) [19] and background knowledge, and they need not be formally defined any further.... Furthermore, we define an explanation M\u2032 as *admissible* if it has a valid fidelity w.r.t. the original model *M* and the data in *Z*\u2014where *Z* is the same subset of the input data used by the explanation strategy. More precisely, we say M\u2032 is \u03b4-admissible in *Z* w.r.t. *M* if \u0394f(M(Z),M\u2032(Z))<\u03b4.... Furthermore, our framework explicitly recognises the *subjective* nature of interpretation, as well as the subtly *objective* nature of explanation. Indeed, interpretation is a subjective activity directly related to agents\u2019 perception and SoM, whereas explanation is an epistemic, computational action which aims at producing a high-fidelity model.",
-          "doi": "10.1007/978-3-030-51924-7_1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7338184/",
-          "citation_count": null,
-          "source": "perplexity",
-          "seed_boost": 0.0,
-          "relevance": 0.4,
-          "support": 0.2,
-          "authority": 0.5,
-          "final": 0.315,
-          "evidence_snippet": "The LLM proposes an action or plan... The system simulates the effect as a state transition... The transition is committed only if valid.",
-          "why": "Discusses formal verification of agent actions and tool invocations, indicating LLMs propose actions, but does not mention ArbiterOS or explicit intent emission."
-        }
-      ],
-      "status": "NEED_MANUAL",
-      "notes": "No candidates met thresholds. Provide manual review."
-    },
-    {
-      "sid": "S8",
-      "sentence": "The Governor intercepts this intent, suspends the Probabilistic CPU, and evaluates the intent against the active Policy Engine.",
-      "rationale": "Describes a specific mechanism involving the Governor, Probabilistic CPU, and Policy Engine which likely requires citation to prior work or formal definition.",
-      "claim_type": "method_description",
-      "queries": [
-        "Symbolic Governor intercepting intent in AI agent orchestration",
-        "Probabilistic CPU suspension and Policy Engine evaluation in AI systems",
-        "Formal verification of Policy Engine and Scheduler Interception mechanisms",
-        "Runtime policy enforcement using Reference Monitor and Symbolic Governor",
-        "Agent Constitution and System 2 cognition in formal AI control architectures",
-        "Access Control Lists and Taint Checks for secure AI agent orchestration"
-      ],
-      "selected": [
-        {
-          "paper_id": null,
-          "title": "Verification and Enforcement of Access Control Policies",
-          "authors": [],
-          "year": null,
-          "venue": null,
-          "abstract": "tem insecure. The security of the system, however, does not only depend on the correct\nspecification of the security policy, but in a large part also on the correct interpretation of\nthose rules by the system\u2019s enforcement mechanism.\nIn this paper, we show how policy rules can be formalized in Fusion Logic, a temporal... logic for the specification of behavior of systems. A symbolic decision procedure for Fusion\nLogic based on Binary Decision Diagrams (BDDs) is provided and we introduce a novel\ntechnique for the construction of enforcement mechanisms of access control policy rules\nthat uses a BDD encoded enforcement automaton based on input traces which reflect state... changes in the system. We provide examples of verification of policy rules, such as absence\nof conflicts, and dynamic separation of duty and of the enforcement of policies using our\nprototype implementation (FLCheck) for which we detail the underlying theory.\nKeywords Access control policy \u00b7 Policy Enforcement \u00b7 Policy Verification \u00b7 Binary\nDecision Diagram... verify properties of the policy specification, e.g., accessibility, dynamic separation of\nduty, dynamic and static conflicts.\n\u2013 We describe a decision procedure for Fusion Logic we have developed that uses Binary\nDecision Diagrams (BDDs), and show how this decision procedure can be adapted to\nact as an enforcement mechanism for history-based access control policies.... The framework consists of three components: Specification, Verification and Enforce-\nment. In the Specification component, one specifies a system by a set of history-based access\ncontrol rules. In the Verification component, one takes this set of rules together with prop-\nerties that need to hold and check whether this set of rules satisfy these properties. In the... tained. The system model is the starting point for verification and enforcement. In Section 4\nwe present an automatic way of checking the satisfiability and validity of Fusion Logic for-\nmulae. We also describe how one can derive enforcement mechanisms for history-based\naccess control policies, expressed in Fusion Logic, based on the same techniques that are... used to determine the satisfiability/validity of Fusion Logic formulae. In Section 5 we il-\nlustrate the verification of properties and the derivation of an enforcement mechanism for a\npolicy-based system with the help of case studies. We conclude our paper in Section 6.",
-          "doi": "10.1007/s10703-013-0187-3",
-          "url": "http://antonio-cau.co.uk/ITL/publications/pubs/2013-10.pdf",
-          "citation_count": null,
-          "source": "perplexity",
-          "seed_boost": 0.0,
-          "relevance": 0.5,
-          "support": 0.4,
-          "authority": 0.5,
-          "final": 0.45,
-          "evidence_snippet": "The process reference monitor is a common technique to enforce security policies for application execution... The reference requests are made in the form of remote procedure calls to the monitor... Based on a pre-defined policy, the monitor may enforce an access control model",
-          "why": "This paper discusses a reference monitor enforcing security policies and intercepting requests, which aligns with the concept of a Governor intercepting intents and evaluating them against policies."
-        }
-      ],
-      "status": "NEED_MANUAL",
-      "notes": "No candidates met thresholds. Provide manual review."
-    },
-    {
-      "sid": "S10",
-      "sentence": "g., Resource Limits, Taint Checks, ACLs) does the Governor execute the tool.",
-      "rationale": "The sentence describes a specific method or mechanism involving Resource Limits, Taint Checks, and ACLs in the Governor's execution, which requires citation to support the technical claim.",
-      "claim_type": "method_description",
-      "queries": [
-        "Formal verification of Symbolic Governor in AI agent orchestration",
-        "Runtime policy enforcement using Resource Limits and Taint Checks in AI systems",
-        "Access Control Lists and Reference Monitor for secure AI agent architectures",
-        "Scheduler Interception and Policy Engine for deterministic code execution in AI agents",
-        "Formal methods for hybrid AI systems with human-in-the-loop control",
-        "Security and access control mechanisms in multiagent systems with formal guarantees"
-      ],
-      "selected": [
-        {
-          "paper_id": null,
-          "title": "Formal Verification of Open Multi-Agent Systems",
-          "authors": [],
-          "year": null,
-          "venue": null,
-          "abstract": "These have taken the form of verification techniques based both\non model checking [16, 18, 25] and theorem proving [1, 31]. A focus\nof attention has been the development of verification methods\nthat support agent-based specifications, including the temporal\nevolution of the knowledge of the agents, their desires, intentions,... for OMAS and to the practical challenges of verifying OMAS.\nThe rest of the paper is organised as follows. After discussing\nrelated work, in Section 2 we propose a semantics for OMAS, show\nhow expressive temporal-epistemic specifications can be evaluated\non them, define the verification problem and show its undecidability.... In Sections 3 and 4 we identify classes of synchronous and asyn-\nchronous OMAS and present decision procedures that address the\nverification problem against the specifications defined in Section 2.\nIn Section 5 we present an open-source toolkit implementing the\nprocedures of Sections 3 and 4, and apply it to scenarios from MAS.... Act, P,t\u27e9consisting of a set of local states L, a unique initial state\n\u03b9 \u2208L, a non-empty set of actions Act, a protocol P : L \u2192P(Act)\nthat selects which actions may be performed at a given state, and a\ntransition function t : L \u00d7 Act \u00d7 P(Act) \u00d7 ActE \u2192L that gives the... states LE, a unique initial state \u03b9E \u2208LE, a non-empty set of actions\nActE, a protocol PE : LE \u2192P(ActE) that defines which actions\nare enabled at each local state, and a transition function tE : LE \u00d7\nActE \u00d7 P(Act) \u2192LE that gives the environment\u2019s next state given... agents\u2019 local states.\nHereafter we associate with each agent an integer giving it an\nidentity. The identity of an agent is uniquely assigned to it when it\nfirst joins the system, and never changes for as long as the agent\nremains in the system. This will allow us to express properties that\ntrack the evolution of a specific agent.... i-th agent in \u0434, si(\u0434) to represent the local state of the agent with\nidentity i in \u0434, and \u0434.E to represent the state of the environment in\n\u0434. We use G \u225c\u222an\u2208NGn for the set of all global states of any size.\nSimilarly, for a joint action a, we use a.i to denote the action of",
-          "doi": "10.65109/shtg3566",
-          "url": "https://aamas.csc.liv.ac.uk/Proceedings/aamas2019/pdfs/p179.pdf",
-          "citation_count": null,
-          "source": "perplexity",
-          "seed_boost": 0.0,
-          "relevance": 0.6,
           "support": 0.5,
-          "authority": 0.5,
-          "final": 0.5349999999999999,
-          "evidence_snippet": "Provability Fabric enforces provable behavioral guarantees through formal verification, runtime security mechanisms, and audit trails.",
-          "why": "This framework enforces behavioral guarantees and security at runtime, which aligns with the concept of a Governor executing tools with constraints like resource limits and ACLs."
-        }
-      ],
-      "status": "NEED_MANUAL",
-      "notes": "No candidates met thresholds. Provide manual review."
-    },
-    {
-      "sid": "S11",
-      "sentence": "This \"Reference Monitor\" pattern  ensures that the agent's cognitive instability cannot propagate to the external world.",
-      "rationale": "The statement attributes a specific security property to the 'Reference Monitor' pattern, which is a technical claim requiring support from prior work or formal verification literature.",
-      "claim_type": "prior_work",
-      "queries": [
-        "Reference Monitor pattern formal verification AI agent cognitive stability",
-        "Symbolic Governor and Reference Monitor in AI agent orchestration",
-        "Formal methods for preventing cognitive instability propagation in AI agents",
-        "Policy Engine and Reference Monitor for runtime enforcement in AI systems",
-        "Agent Constitution and Scheduler Interception for secure AI agent control",
-        "Access Control Lists and Taint Checks in AI agent formal verification"
-      ],
-      "selected": [
-        {
-          "paper_id": null,
-          "title": "Agent-Based Explanations in AI: Towards an Abstract Framework",
-          "authors": [],
-          "year": null,
-          "venue": null,
-          "abstract": "The opaqueness of ML-based solutions is an unacceptable condition in a world where ML is involved in many (safety-)critical activities. Indeed, performing automatic, good predictions (resp. provide useful decisions) is essential as much as letting the humans involved in those contexts *understand* why and how such predictions (resp. decisions) have been obtained.... In this paper, we propose an abstract framework for XAI relying on notions and results from the MAS literature. The framework is mostly targetting sub-symbolic AI and ML-based intelligent systems. In particular, our framework introduces a clear distinction among two orthogonal, yet interrelated, activities \u2013 i.e., *interpretation* and *explanation* \u2013 which can be performed on sub-symbolic predictors to make them more understandable in the eyes of human beings. Thus, it provides a formal definition for such activities in the MAS perspective, thus stressing the *objective* nature of explanation, other than the *subjective* nature of interpretation.... Clearly, troubles in understanding black-box content and functioning prevent people from fully trusting \u2013 therefore accepting \u2013 them. To make the picture even more complex, current regulations such as the GDPR [25] are starting to recognise the citizens\u2019 *right to explanation* [12]\u2014which implicitly requires IS to eventually become *understandable*. Indeed, understanding IS is essential to guarantee algorithmic fairness, to identify potential bias/problems in the training data, and to ensure that IS perform as designed and expected.... As far as explainability is concerned, apparently, Rudin adopts a *post-hoc* perspective similar to the one in [15], as she writes, \u201can explanation is a separate model that is supposed to replicate most of the behaviour of a black box\u201d. In the remainder of that paper, the author argues how the path towards interpretable ML steps through broader adoption of inherently interpretable predictors \u2013 such as generalised linear models or decision trees \u2013 rather than relying on *post-hoc* explanations which do not reveal what is inside black boxes\u2014thus preventing their full understanding.... Conversely, it may also happen the explanation *E* adopted by *A* produces an object X\u2032, which is more interpretable than *X* for *A* but not for *B*. Similarly to how two persons would handle such an unpleasant situation, we envision that interaction and communication may be adopted to break such *impasses* in multi-agent systems.",
-          "doi": "10.1007/978-3-030-51924-7_1",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7338184/",
-          "citation_count": null,
-          "source": "perplexity",
-          "seed_boost": 0.0,
-          "relevance": 0.6,
-          "support": 0.5,
-          "authority": 0.6,
-          "final": 0.5499999999999999,
-          "evidence_snippet": "Policy Cards enable agents to follow required constraints at runtime... enabling verifiable compliance for autonomous agents.",
-          "why": "Policy Cards provide runtime governance mechanisms that can enforce constraints preventing undesired propagation of agent instability."
+          "authority": 0.2,
+          "final": 0.42000000000000004,
+          "evidence_snippet": "deterministic coding has its limitations",
+          "why": "It discusses deterministic programming but lacks a direct connection to formal verification of languages like Python or Rust."
         }
       ],
       "status": "NEED_MANUAL",

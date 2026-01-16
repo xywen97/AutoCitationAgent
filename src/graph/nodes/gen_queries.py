@@ -9,7 +9,7 @@ logger = get_logger(__name__)
 
 
 def gen_queries_node(state: GraphState) -> GraphState:
-    logger.info("Generating search queries for claims")
+    logger.info("[gen_queries] Generating search queries for claims")
     llm = LlmClient(
         api_key=state.config.openai_api_key,
         base_url=state.config.openai_base_url,
@@ -43,7 +43,7 @@ def gen_queries_node(state: GraphState) -> GraphState:
                 query_items.append(QueryItem(cid=claim.cid, query=q, type="seed"))
         queries_by_claim[claim.cid] = query_items
     total_queries = sum(len(qs) for qs in queries_by_claim.values())
-    logger.info("Generated %d queries for %d claims", total_queries, len(claims))
+    logger.info("[gen_queries] Generated %d queries for %d claims", total_queries, len(claims))
     state.claims = claims
     state.queries_by_claim = queries_by_claim
     return state

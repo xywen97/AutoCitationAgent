@@ -7,12 +7,12 @@ logger = get_logger(__name__)
 
 
 def human_review_node(state: GraphState) -> GraphState:
-    logger.info("Checking for manual review requirements")
+    logger.info("[human_review] Checking for manual review requirements")
     needs_manual = [c for c in state.selected_by_claim.values() if c.status == "NEED_MANUAL"]
     if not needs_manual:
-        logger.info("No manual review needed")
+        logger.info("[human_review] No manual review needed")
         return state
-    logger.warning("Manual review required for %d claims", len(needs_manual))
+    logger.warning("[human_review] Manual review required for %d claims", len(needs_manual))
     print("\nManual review required for some claims:")
     for item in needs_manual:
         print(f"- {item.cid}: {item.notes}")

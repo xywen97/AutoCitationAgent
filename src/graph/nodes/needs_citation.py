@@ -23,7 +23,7 @@ def _count_cites(sentence_text: str) -> int:
 
 
 def needs_citation_node(state: GraphState) -> GraphState:
-    logger.info("Classifying sentences for citation needs")
+    logger.info("[needs_citation] Classifying sentences for citation needs")
     llm = LlmClient(
         api_key=state.config.openai_api_key,
         base_url=state.config.openai_base_url,
@@ -56,6 +56,6 @@ def needs_citation_node(state: GraphState) -> GraphState:
             )
         )
     needs_count = sum(1 for n in needs if n.needs_more_citations)
-    logger.info("Found %d sentences needing citations (out of %d total)", needs_count, len(needs))
+    logger.info("[needs_citation] Found %d sentences needing citations (out of %d total)", needs_count, len(needs))
     state.citation_needs = needs
     return state

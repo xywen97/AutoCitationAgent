@@ -8,10 +8,10 @@ logger = get_logger(__name__)
 
 
 def segment_node(state: GraphState) -> GraphState:
-    logger.info("Splitting document into sentences")
+    logger.info("[segment] Splitting document into sentences")
     sentences = []
     for idx, (text, start, end) in enumerate(split_sentences(state.raw_text)):
         sentences.append(SentenceItem(sid=f"S{idx}", text=text, start=start, end=end, index=idx))
-    logger.info("Identified %d sentences", len(sentences))
+    logger.info("[segment] Identified %d sentences", len(sentences))
     state.sentences = sentences
     return state

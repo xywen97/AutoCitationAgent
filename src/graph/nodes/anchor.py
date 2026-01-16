@@ -9,7 +9,7 @@ logger = get_logger(__name__)
 
 
 def anchor_node(state: GraphState) -> GraphState:
-    logger.info("Analyzing document topic and extracting key terms")
+    logger.info("[anchor] Analyzing document topic and extracting key terms")
     llm = LlmClient(
         api_key=state.config.openai_api_key,
         base_url=state.config.openai_base_url,
