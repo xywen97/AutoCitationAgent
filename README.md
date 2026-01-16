@@ -1,4 +1,4 @@
-# auto_citation_agent
+# Auto Citation Agent
 
 LangGraph-based agent that adds citations to LaTeX drafts (intro/related work)
 using Semantic Scholar and Crossref.
