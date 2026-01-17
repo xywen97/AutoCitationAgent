@@ -27,13 +27,13 @@ PERPLEXITY_MODEL=sonar
 ## Run
 
 ```bash
-python -m src.main --input draft.tex --output_dir out/
+python -m src.main --input cases/draft.tex --output_dir out/
 ```
 
 Optional:
 
 ```bash
-python -m src.main --input draft.tex --bib references.bib --output_dir out/
+python -m src.main --input cases/draft.tex --bib cases/references.bib --output_dir out/
 ```
 
 ## LaTeX usage
